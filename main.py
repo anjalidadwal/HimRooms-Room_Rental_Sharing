@@ -40,7 +40,7 @@ is_vercel = os.getenv('VERCEL', '0') == '1'
 app.config['SQLALCHEMY_DATABASE_URI'] = (
     os.getenv('SQLALCHEMY_DATABASE_URI')
     or os.getenv('DATABASE_URL')
-    or ('sqlite:////tmp/himrooms.db' if is_vercel else 'sqlite:///himrooms.db')
+    or ('sqlite:///:memory:' if is_vercel else 'sqlite:///himrooms.db')
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = os.getenv('SQLALCHEMY_TRACK_MODIFICATIONS', 'False').lower() == 'true'
 
