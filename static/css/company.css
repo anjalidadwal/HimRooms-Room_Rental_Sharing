@@ -1,0 +1,55 @@
+.company-page {
+    background-color: #ffffff;
+    color: #555;
+    line-height: 1.6;
+}
+
+.company-page .container {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+    min-height: 40vh;
+}
+
+.company-page .about-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.company-page .about-text {
+    flex: 1.2;
+}
+
+.company-page .about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.company-page .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.company-page h1 {
+    color: #1a202c;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.company-page p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .company-page .about-section {
+        flex-direction: column;
+    }
+}

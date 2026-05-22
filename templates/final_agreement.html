@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/final_agreement.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="agreement-wrapper">
+
+    <div class="agreement-document">
+        <h1 class="agreement-title">RENTAL AGREEMENT</h1>
+
+        <p class="agreement-intro">This Rent Agreement is made on this day between the following parties:</p>
+
+        <h3 class="agreement-section-title">1. THE OWNER (LESSOR)</h3>
+        <p class="agreement-text"><strong>Name:</strong> {{ session.get('owner_name') }}</p>
+        <p class="agreement-text"><strong>Address:</strong> {{ session.get('owner_address') }}</p>
+        <p class="agreement-text"><strong>Phone:</strong> {{ session.get('owner_mobile') }}</p>
+
+        <h3 class="agreement-section-title">2. THE TENANT (LESSEE)</h3>
+        <p class="agreement-text"><strong>Name:</strong> {{ session.get('tenant_name') }}</p>
+        <p class="agreement-text"><strong>Address:</strong> {{ session.get('tenant_address') }}</p>
+        <p class="agreement-text"><strong>Phone:</strong> {{ session.get('tenant_mobile') }}</p>
+
+        <h3 class="agreement-section-title">3. PROPERTY DETAILS</h3>
+        <p class="agreement-text">The owner agrees to rent out the property located at <strong>{{
+                session.get('prop_address') }}, {{ session.get('prop_city') }}, {{ session.get('prop_state') }} - {{
+                session.get('prop_pincode') }}</strong>.</p>
+
+        <h3 class="agreement-section-title">4. TERMS & CONDITIONS</h3>
+        <p class="agreement-text">
+            The monthly rent is agreed at <strong>₹{{ session.get('rent_amount') }}</strong>.
+            The agreement is valid for a period of <strong>{{ session.get('validity') }} months</strong>,
+            starting from <strong>{{ session.get('start_date') }}</strong>.
+        </p>
+        <p class="agreement-text">
+            A security deposit of <strong>₹{{ session.get('deposit') }}</strong> has been paid by the tenant.
+            Both parties agree to a lock-in period of <strong>{{ session.get('lock_in') }} months</strong>
+            and a notice period of <strong>{{ session.get('notice_period') }} months</strong> before vacating.
+        </p>
+
+        <div class="agreement-signatures">
+            <div class="signature-block">
+                <div class="signature-line"></div>
+                <div class="signature-label">Signature of Owner</div>
+            </div>
+            <div class="signature-block">
+                <div class="signature-line"></div>
+                <div class="signature-label">Signature of Tenant</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="agreement-actions">
+        <button onclick="window.print()" class="print-btn">🖨️ Print / Save as PDF</button>
+    </div>
+
+</div>
+
+<script>
+    document.title = "HimRooms - Rent Agreement";
+</script>
+{% endblock %}

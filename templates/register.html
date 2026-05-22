@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Registration - HimRooms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* Top Logo */
+        .brand-logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+            text-decoration: none;
+        }
+
+        .brand-logo span {
+            color: #00b87c;
+        }
+
+        /* Main Form Card */
+        .register-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            padding: 50px 60px;
+            box-sizing: border-box;
+        }
+
+        .header-text {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-text h2 {
+            color: #4b5563;
+            font-size: 24px;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .header-text p {
+            color: #888;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Form Row Layout */
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .form-label {
+            flex: 0 0 40%;
+            font-size: 14px;
+            font-weight: 500;
+            color: #4b5563;
+        }
+
+        .form-input-container {
+            flex: 0 0 60%;
+            position: relative;
+        }
+
+        /* Input Styling */
+        .form-input {
+            width: 100%;
+            background-color: #f3f4f6;
+            border: 1px solid transparent;
+            padding: 14px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: #374151;
+            outline: none;
+            box-sizing: border-box;
+            font-family: inherit;
+            transition: border 0.2s;
+            appearance: auto;
+        }
+
+        .form-input:focus {
+            border-color: #00b87c;
+        }
+
+        .input-note {
+            display: block;
+            font-size: 11px;
+            color: #6b7280;
+            margin-top: 8px;
+            padding-left: 15px;
+        }
+
+        /* Gender Toggle Buttons */
+        .gender-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .gender-btn {
+            background-color: #f3f4f6;
+            color: #6b7280;
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            user-select: none;
+        }
+
+        input[type="radio"]:checked+.gender-btn {
+            background-color: #00b87c;
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 184, 124, 0.3);
+        }
+
+        /* Avatar Selection */
+        .avatar-group {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .avatar-label {
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .avatar-img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid transparent;
+            transition: all 0.2s ease;
+            background-color: #f3f4f6;
+        }
+
+        input[type="radio"]:checked+.avatar-label .avatar-img {
+            border-color: #00b87c;
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 184, 124, 0.2);
+        }
+
+        /* Submit Button */
+        .submit-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .submit-btn {
+            background-color: #00b87c;
+            color: white;
+            border: none;
+            padding: 14px 60px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 184, 124, 0.3);
+        }
+
+        .submit-btn:hover {
+            background-color: #009968;
+        }
+
+        /* Custom City Dropdown */
+        .custom-dropdown-container {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .custom-dropdown-selected {
+            width: 100%;
+            background-color: #f3f4f6;
+            padding: 14px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: #6b7280;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .custom-dropdown-options {
+            display: none;
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            max-height: 220px;
+            overflow-y: auto;
+        }
+
+        .custom-dropdown-options.show {
+            display: block;
+        }
+
+        .city-option {
+            display: block;
+            padding: 12px 20px;
+            color: #374151;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .city-option:hover {
+            background: #f3f4f6;
+        }
+
+        /* Responsive behavior */
+        @media (max-width: 768px) {
+            .register-card {
+                padding: 30px 20px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+
+            .form-label {
+                margin-bottom: 8px;
+                width: 100%;
+            }
+
+            .form-input-container {
+                width: 100%;
+            }
+
+            .gender-group {
+                width: 100%;
+            }
+
+            .gender-btn {
+                flex: 1;
+                padding: 12px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="{{ url_for('home') }}" class="brand-logo">Him<span>Rooms</span><sup>®</sup></a>
+
+    <div class="register-card">
+        <div class="header-text">
+            <h2>You are Almost Done!</h2>
+            <p>Please fill below details to continue.</p>
+        </div>
+
+        {% if error %}
+        <div
+            style="background-color: #fee2e2; color: #b91c1c; padding: 12px; border-radius: 6px; margin-bottom: 20px; font-size: 14px; font-weight: 500; text-align: center; border: 1px solid #fca5a5;">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <form action="{{ url_for('register') }}" method="POST" id="registrationForm">
+
+            <div class="form-row">
+                <div class="form-label">Your Name*</div>
+                <div class="form-input-container">
+                    <input type="text" name="name" class="form-input" placeholder="Please enter your name" required>
+                    <span class="input-note">Note: Users with real names gets 90% more engagement.</span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">Email Address*</div>
+                <div class="form-input-container">
+                    <input type="email" name="email" class="form-input" placeholder="e.g. rahul@example.com" required>
+                    <span class="input-note">We will send your login OTP to this email.</span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">Mobile Number*</div>
+                <div class="form-input-container">
+                    <input type="tel" name="mobile" class="form-input" placeholder="Mobile Number (10 digits)"
+                        pattern="[6-9][0-9]{9}" maxlength="10"
+                        title="Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">Who You Are*</div>
+                <div class="form-input-container">
+                    <select name="user_role" class="form-input" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="looking_flatmate">You are looking for a Flat/Flatmate/PG</option>
+                        <option value="looking_tenant">You are looking for tenant</option>
+                        <option value="looking_owner">You are looking for owner</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">Your Gender*</div>
+                <div class="form-input-container gender-group">
+                    <input type="radio" name="gender" value="Male" id="genderMale" hidden required>
+                    <label class="gender-btn" for="genderMale">Male</label>
+
+                    <input type="radio" name="gender" value="Female" id="genderFemale" hidden required>
+                    <label class="gender-btn" for="genderFemale">Female</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">Please select the city where you're searching*</div>
+                <div class="form-input-container">
+                    <div class="custom-dropdown-container" id="cityDropdownContainer">
+                        <div class="custom-dropdown-selected" onclick="toggleCityDropdown()">
+                            <span id="currentCityText">Select City</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+
+                        <input type="hidden" name="city" id="selectedCityInput" required>
+
+                        <div class="custom-dropdown-options" id="cityOptionsList">
+                            <div class="city-option" onclick="selectCity('Shimla')">Shimla</div>
+                            <div class="city-option" onclick="selectCity('Dharamshala')">Dharamshala</div>
+                            <div class="city-option" onclick="selectCity('Mandi')">Mandi</div>
+                            <div class="city-option" onclick="selectCity('Kangra')">Kangra</div>
+                            <div class="city-option" onclick="selectCity('Palampur')">Palampur</div>
+                            <div class="city-option" onclick="selectCity('Chamba')">Chamba</div>
+                            <div class="city-option" onclick="selectCity('Bilaspur')">Bilaspur</div>
+                            <div class="city-option" onclick="selectCity('Sundernagar')">Sundernagar</div>
+                            <div class="city-option" onclick="selectCity('Nurpur')">Nurpur</div>
+                            <div class="city-option" onclick="selectCity('Hamirpur')">Hamirpur</div>
+                            <div class="city-option" onclick="selectCity('Solan')">Solan</div>
+                            <div class="city-option" onclick="selectCity('Kullu')">Kullu</div>
+                            <div class="city-option" onclick="selectCity('Manali')">Manali</div>
+                            <div class="city-option" onclick="selectCity('Baddi')">Baddi</div>
+                            <div class="city-option" onclick="selectCity('Nahan')">Nahan</div>
+                            <div class="city-option" onclick="selectCity('Paonta')">Paonta</div>
+                            <div class="city-option" onclick="selectCity('Yol')">Yol</div>
+                            <div class="city-option" onclick="selectCity('Una')">Una</div>
+                            <div class="city-option" onclick="selectCity('Nagrota Bagwan')">Nagrota Bagwan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">Select Avatar</div>
+                <div class="form-input-container avatar-group">
+
+                    <input type="radio" name="avatar" value="avatarm.jpg" id="avatarMale" hidden required>
+                    <label class="avatar-label" for="avatarMale">
+                        <img src="{{ url_for('static', filename='images/avatarm.jpg') }}" alt="Male Avatar"
+                            class="avatar-img">
+                    </label>
+
+                    <input type="radio" name="avatar" value="avatarf.jpg" id="avatarFemale" hidden required>
+                    <label class="avatar-label" for="avatarFemale">
+                        <img src="{{ url_for('static', filename='images/avatarf.jpg') }}" alt="Female Avatar"
+                            class="avatar-img">
+                    </label>
+
+                </div>
+            </div>
+
+            <div class="submit-container">
+                <button type="submit" class="submit-btn" onclick="return validateCity()">Register</button>
+
+                <p style="margin-top: 25px; font-size: 14px; color: #666;">
+                    Already have an account? <a href="{{ url_for('login') }}"
+                        style="color: #00b87c; font-weight: 600; text-decoration: none;">Login here</a>
+                </p>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        // Custom Dropdown Logic
+        function toggleCityDropdown() {
+            document.getElementById("cityOptionsList").classList.toggle("show");
+        }
+
+        // When a user clicks a city in the dropdown
+        function selectCity(cityName) {
+            document.getElementById("currentCityText").innerText = cityName;
+            document.getElementById("currentCityText").style.color = "#374151";
+            document.getElementById("selectedCityInput").value = cityName;
+            document.getElementById("cityOptionsList").classList.remove("show");
+        }
+
+        // Make sure user selected a city before submitting
+        function validateCity() {
+            const selectedCity = document.getElementById("selectedCityInput").value;
+            if (selectedCity === "") {
+                alert("Please select a city.");
+                return false;
+            }
+            return true;
+        }
+
+        // Close dropdown if clicking outside
+        window.onclick = function (event) {
+            if (!event.target.closest('.custom-dropdown-container')) {
+                let dropdown = document.getElementById("cityOptionsList");
+                if (dropdown && dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

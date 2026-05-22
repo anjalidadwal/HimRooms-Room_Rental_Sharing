@@ -1,0 +1,278 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Agreement</title>
+
+    <style>
+        .ra-page {
+            background-color: #f4f6f8;
+            padding-bottom: 60px;
+        }
+
+        /* Heading */
+        .ra-header {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .ra-header h1 {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .ra-header .ra-line {
+            width: 120px;
+            height: 3px;
+            background: #2c3e50;
+            margin: 10px auto;
+        }
+
+        /* Main Layout */
+        .ra-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 40px;
+            gap: 40px;
+        }
+
+        /* Left Steps */
+        .ra-steps {
+            width: 250px;
+        }
+
+        .ra-step {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: #6c757d;
+            font-size: 16px;
+        }
+
+        .ra-step-link {
+            text-decoration: none;
+            color: #6c757d;
+        }
+
+        .ra-step-link:hover {
+            color: #2c3e50;
+        }
+
+        .ra-active-text {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .ra-circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #adb5bd;
+            margin-right: 12px;
+        }
+
+        .ra-active {
+            background: #2c3e50;
+        }
+
+        /* Right Card */
+        .ra-card {
+            background: white;
+            width: 450px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .ra-card h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .ra-card p {
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        /* Form */
+        .ra-card label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .ra-card input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            font-size: 14px;
+        }
+
+        .ra-card input:focus {
+            outline: none;
+            border-color: #2c7be5;
+        }
+
+        /* Button */
+        .ra-button-box {
+            margin-top: 25px;
+            text-align: right;
+        }
+
+        .ra-button-box button {
+            background: #20c997;
+            border: none;
+            padding: 12px 25px;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .ra-button-box button:hover {
+            background: #17a589;
+        }
+
+        /* Responsive */
+        @media(max-width:768px) {
+            .ra-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .ra-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body class="ra-page"> -->
+{% extends "layout.html" %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/create.css') }}">
+{% endblock %}
+{% block body %}
+
+<div class="centered-column multi-step-form-page">
+    <div class="multi-step-form-header">
+        <h1>Rent Agreement</h1>
+        <div class="multi-step-form-underline"></div>
+    </div>
+
+    <div class="form-layout-cols">
+        <div class="sidebar-steps-list">
+            <div class="step-item-wrapper active">
+                <div class="step-icon-circle"></div><span class="active-text">Owner Details</span>
+            </div>
+            <div class="step-item-wrapper">
+                <div class="step-icon-circle"></div><a href="{{ url_for('create1') }}">Tenant Details</a>
+            </div>
+            <div class="step-item-wrapper">
+                <div class="step-icon-circle"></div><a href="{{ url_for('create2') }}">Property Details</a>
+            </div>
+            <div class="step-item-wrapper">
+                <div class="step-icon-circle"></div><a href="{{ url_for('create3') }}">Agreement Terms</a>
+            </div>
+            <div class="step-item-wrapper">
+                <div class="step-icon-circle"></div><a href="{{ url_for('create4') }}">Annexures</a>
+            </div>
+        </div>
+
+        <div class="content-form-card">
+            <h2>Who owns the property?</h2>
+            <div class="subtitle">Fill in details of the owner/lessor/landlord.</div>
+
+            <form action="{{ url_for('create') }}" method="POST" class="multi-step-vertical-form">
+
+                <label>Full Name*</label>
+                <input type="text" name="owner_name" value="{{ session.get('owner_name', '') }}"
+                    style="text-transform: uppercase;" required>
+
+                <label>Mobile Number*</label>
+                <input type="tel" name="owner_mobile" value="{{ session.get('owner_mobile', '') }}"
+                    pattern="[6-9][0-9]{9}" maxlength="10"
+                    title="Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9" required>
+
+                <label>Address*</label>
+                <input type="text" name="owner_address" value="{{ session.get('owner_address', '') }}"
+                    placeholder="Enter Owner's full address with pincode" style="text-transform: uppercase;"
+                    minlength="10" pattern=".*[1-9][0-9]{5}.*"
+                    title="Please type your full address AND include a valid 6-digit Pincode (e.g., 176215)" required>
+
+                <div class="aligned-action-footer">
+                    <button type="submit">Save & Continue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="ra-header">
+    <h1>Rent Agreement</h1>
+    <div class="ra-line"></div>
+</div>
+
+<div class="ra-container"> -->
+
+<!-- Left Steps -->
+<!-- <div class="ra-steps">
+
+        <div class="ra-step">
+            <div class="ra-circle ra-active"></div>
+            <a href="{{ url_for('create') }}" class="ra-step-link ra-active-text">Owner Details</a>
+        </div>
+
+        <div class="ra-step">
+            <div class="ra-circle"></div>
+            <a href="{{ url_for('create1') }}" class="ra-step-link">Tenant Details</a>
+        </div>
+
+        <div class="ra-step">
+            <div class="ra-circle"></div>
+            <a href="{{ url_for('create2') }}" class="ra-step-link">Property Details</a>
+        </div>
+
+        <div class="ra-step">
+            <div class="ra-circle"></div>
+            <a href="{{ url_for('create3') }}" class="ra-step-link">Agreement Terms</a>
+        </div>
+
+        <div class="ra-step">
+            <div class="ra-circle"></div>
+            <a href="{{ url_for('create4') }}" class="ra-step-link">Annexures</a>
+        </div>
+
+    </div> -->
+
+<!-- Right Card -->
+<!-- <form action="{{ url_for('create') }}" method="POST">
+
+        <label>Full Name*</label>
+        <input type="text" name="owner_name" required>
+
+        <label>Mobile Number*</label>
+        <input type="tel" name="owner_mobile" pattern="[0-9]{10}" title="Enter a valid 10 digit number" required>
+
+        <label>Address*</label>
+        <input type="text" name="owner_address" placeholder="Enter Owner's full address with pincode" required>
+
+        <div class="ra-button-box">
+            <button type="submit">Save & Continue</button>
+        </div>
+
+    </form>
+
+</div> -->
+
+
+
+{% endblock %}
+<!-- </body> -->
+
+<!-- </html> -->

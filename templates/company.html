@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/company.css') }}">
+{% endblock %}
+{% block body %}
+<div class="company-page">
+    <div class="container">
+        <div class="about-section">
+            <div class="about-text">
+                <h1>About us</h1>
+                <p>
+                    HimRooms is Himachal Pradesh's premier "Home Rental Network" dedicated to helping you find and rent
+                    furnished rooms, PGs, and shared living spaces. We actively operate across major cities including
+                    Shimla, Dharamshala, Manali, Kangra, Palampur, Mandi, Solan, and Kullu.
+                </p>
+                <p>
+                    We understand that a great living experience starts with great people. HimRooms tactfully works to
+                    provide you with roommates and spaces that match your lifestyle, keeping compatibility as the top priority.
+                    As a user, you can lay down your exact requirements and preferences to find your optimum living arrangement
+                    in the hills seamlessly and securely.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='images/people.png') }}" alt="HimRooms Community">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,76 @@
+.tc-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body replacement */
+.tc-page {
+    background-color: #f2f2f2;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Container */
+.tc-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Main Heading */
+.tc-h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Section Headings */
+.tc-h2 {
+    font-size: 18px;
+    color: #00a651;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph */
+.tc-p {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+/* Small text */
+.tc-small-text {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* Lists */
+.tc-ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.tc-li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Links */
+.tc-a {
+    color: #00a651;
+    text-decoration: none;
+}
+
+.tc-a:hover {
+    text-decoration: underline;
+}
+
+/* Divider */
+.tc-section-divider {
+    margin-top: 40px;
+}

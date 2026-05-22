@@ -1,0 +1,3460 @@
+[
+    {
+        "id": 1,
+        "category": "rooms",
+        "name": "Tejaswi",
+        "location": "Shimla, India",
+        "rent": "8000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "category": "rooms",
+        "name": "Muskan",
+        "location": "Shimla, India",
+        "rent": "11000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "1.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "category": "rooms",
+        "name": "Rimjhim Kumari",
+        "location": "Shimla, Delhi",
+        "rent": "9000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "3.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "category": "rooms",
+        "name": "Sakshi",
+        "location": "Shimla, India",
+        "rent": "12000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "3.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "category": "roommates",
+        "name": "Sarvesh Sharma",
+        "location": "Shimla, India",
+        "rent": "20000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "category": "roommates",
+        "name": "Shivi",
+        "location": "Shimla, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "category": "roommates",
+        "name": "Rakesh Kumar",
+        "location": "Shimla, Delhi",
+        "rent": "10000",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "category": "roommates",
+        "name": "Hidayath",
+        "location": "Shimla, India",
+        "rent": "5000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "category": "pg",
+        "name": "Sadev Sadan",
+        "location": "Shimla, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 10,
+        "category": "pg",
+        "name": "Night View",
+        "location": "in Kasumti, Shimla, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "0.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 11,
+        "category": "pg",
+        "name": "Tomar PG",
+        "location": "in Dhalli, Shimla, India",
+        "rent": "8000",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.1 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 12,
+        "category": "pg",
+        "name": "Tara PG",
+        "location": "in Totu, Shimla, India",
+        "rent": "4000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "1.7 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 13,
+        "category": "rooms",
+        "name": "Tejaswi",
+        "location": "Dharamshala, India",
+        "rent": "8000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 14,
+        "category": "rooms",
+        "name": "Muskan",
+        "location": "Dharamshala, India",
+        "rent": "11000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "1.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 15,
+        "category": "rooms",
+        "name": "Rimjhim Kumari",
+        "location": "Dharamshala, India",
+        "rent": "9000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "3.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 16,
+        "category": "rooms",
+        "name": "Sakshi",
+        "location": "Dharamshala, India",
+        "rent": "12000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "3.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 17,
+        "category": "roommates",
+        "name": "Sarvesh Sharma",
+        "location": "Dharamshala, India",
+        "rent": "20000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 18,
+        "category": "roommates",
+        "name": "Shivi",
+        "location": "Dharamshala, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 19,
+        "category": "roommates",
+        "name": "Rakesh Kumar",
+        "location": "Dharamshala, India",
+        "rent": "10000",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 20,
+        "category": "roommates",
+        "name": "Hidayath",
+        "location": "Dharamshala, India",
+        "rent": "5000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 21,
+        "category": "pg",
+        "name": "Sadev Sadan",
+        "location": "Dharamshala, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 22,
+        "category": "pg",
+        "name": "Night View",
+        "location": "in Dharamshala, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "0.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 23,
+        "category": "pg",
+        "name": "Tomar PG",
+        "location": "in Dharamshala, India",
+        "rent": "8000",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.1 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 24,
+        "category": "pg",
+        "name": "Tara PG",
+        "location": "in Dharamshala, India",
+        "rent": "4000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "1.7 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 25,
+        "category": "rooms",
+        "name": "Anjali Verma",
+        "location": "Manali, India",
+        "rent": "8500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 26,
+        "category": "rooms",
+        "name": "Kritika",
+        "location": "Old Manali, India",
+        "rent": "11500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "1.2 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 27,
+        "category": "rooms",
+        "name": "Priya Sharma",
+        "location": "Vashisht, Manali, India",
+        "rent": "9500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "3.1 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 28,
+        "category": "rooms",
+        "name": "Neha",
+        "location": "Manali, India",
+        "rent": "12500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "3.8 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 29,
+        "category": "roommates",
+        "name": "Rohan Thakur",
+        "location": "Manali, India",
+        "rent": "22000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 30,
+        "category": "roommates",
+        "name": "Sneha",
+        "location": "Manali, India",
+        "rent": "6500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 31,
+        "category": "roommates",
+        "name": "Amit Singh",
+        "location": "Aleo, Manali, India",
+        "rent": "11000",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 32,
+        "category": "roommates",
+        "name": "Arjun",
+        "location": "Manali, India",
+        "rent": "5500",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 33,
+        "category": "pg",
+        "name": "Snow Peak PG",
+        "location": "Manali, India",
+        "rent": "7500",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 34,
+        "category": "pg",
+        "name": "Mountain View PG",
+        "location": "in Prini, Manali, India",
+        "rent": "7200",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "0.8 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 35,
+        "category": "pg",
+        "name": "Himalayan Home PG",
+        "location": "in Simsa, Manali, India",
+        "rent": "8500",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 36,
+        "category": "pg",
+        "name": "Valley Stay PG",
+        "location": "in Old Manali, India",
+        "rent": "4500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.1 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 37,
+        "category": "rooms",
+        "name": "Pooja Thakur",
+        "location": "Kangra, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 38,
+        "category": "rooms",
+        "name": "Kavita Sharma",
+        "location": "Nagrota Surian, Kangra, India",
+        "rent": "8500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.1 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 39,
+        "category": "rooms",
+        "name": "Deepak Rana",
+        "location": "Kangra, India",
+        "rent": "7500",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.8 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 40,
+        "category": "rooms",
+        "name": "Simran Guleria",
+        "location": "Shahpur, Kangra, India",
+        "rent": "9000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "3.2 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 41,
+        "category": "roommates",
+        "name": "Vikram Pathania",
+        "location": "Kangra, India",
+        "rent": "15000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 42,
+        "category": "roommates",
+        "name": "Reena Devi",
+        "location": "Kangra, India",
+        "rent": "5500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 43,
+        "category": "roommates",
+        "name": "Mohit Katoch",
+        "location": "Dharamkot, Kangra, India",
+        "rent": "8000",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 44,
+        "category": "roommates",
+        "name": "Sunita Kumari",
+        "location": "Kangra, India",
+        "rent": "4500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 45,
+        "category": "pg",
+        "name": "Kangra Valley PG",
+        "location": "Kangra, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 46,
+        "category": "pg",
+        "name": "Fort View PG",
+        "location": "in Kangra Fort Area, India",
+        "rent": "6500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 47,
+        "category": "pg",
+        "name": "Pathania PG",
+        "location": "in Nagrota Surian, Kangra, India",
+        "rent": "7000",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 48,
+        "category": "pg",
+        "name": "Devi PG",
+        "location": "in Shahpur, Kangra, India",
+        "rent": "3500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 49,
+        "category": "rooms",
+        "name": "Nisha Jaswal",
+        "location": "Palampur, India",
+        "rent": "7500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 50,
+        "category": "rooms",
+        "name": "Rahul Dogra",
+        "location": "Palampur, India",
+        "rent": "9000",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 51,
+        "category": "rooms",
+        "name": "Aarti Bhatt",
+        "location": "Lohna, Palampur, India",
+        "rent": "8000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.9 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 52,
+        "category": "rooms",
+        "name": "Suresh Chandel",
+        "location": "Palampur, India",
+        "rent": "10000",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 53,
+        "category": "roommates",
+        "name": "Harpreet Singh",
+        "location": "Palampur, India",
+        "rent": "16000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 54,
+        "category": "roommates",
+        "name": "Mansi Verma",
+        "location": "Palampur, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 55,
+        "category": "roommates",
+        "name": "Tarun Mehta",
+        "location": "Bundla, Palampur, India",
+        "rent": "9000",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 56,
+        "category": "roommates",
+        "name": "Ritu Sharma",
+        "location": "Palampur, India",
+        "rent": "5000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 57,
+        "category": "pg",
+        "name": "Tea Garden PG",
+        "location": "Palampur, India",
+        "rent": "6500",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "2.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 58,
+        "category": "pg",
+        "name": "Neugal View PG",
+        "location": "in Palampur, India",
+        "rent": "7000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.9 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 59,
+        "category": "pg",
+        "name": "Bundla PG",
+        "location": "in Bundla, Palampur, India",
+        "rent": "7500",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 60,
+        "category": "pg",
+        "name": "Saurabh PG",
+        "location": "in Palampur, India",
+        "rent": "4000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 61,
+        "category": "rooms",
+        "name": "Geeta Minhas",
+        "location": "Chamba, India",
+        "rent": "6500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 62,
+        "category": "rooms",
+        "name": "Rajiv Chauhan",
+        "location": "Chamba, India",
+        "rent": "8000",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.7 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 63,
+        "category": "rooms",
+        "name": "Poonam Devi",
+        "location": "Sadar Bazar, Chamba, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 64,
+        "category": "rooms",
+        "name": "Anil Kumar",
+        "location": "Chamba, India",
+        "rent": "9500",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.1 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 65,
+        "category": "roommates",
+        "name": "Deepak Minhas",
+        "location": "Chamba, India",
+        "rent": "14000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 66,
+        "category": "roommates",
+        "name": "Shweta Rana",
+        "location": "Chamba, India",
+        "rent": "5000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 67,
+        "category": "roommates",
+        "name": "Pankaj Bhatt",
+        "location": "Chamba, India",
+        "rent": "8500",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 68,
+        "category": "roommates",
+        "name": "Kamla Devi",
+        "location": "Chamba, India",
+        "rent": "4000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 69,
+        "category": "pg",
+        "name": "Ravi Sadan PG",
+        "location": "Chamba, India",
+        "rent": "5500",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 70,
+        "category": "pg",
+        "name": "Chaugan View PG",
+        "location": "in Chamba, India",
+        "rent": "6000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.7 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 71,
+        "category": "pg",
+        "name": "Minhas PG",
+        "location": "in Sadar Bazar, Chamba, India",
+        "rent": "6500",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 72,
+        "category": "pg",
+        "name": "Bhuri PG",
+        "location": "in Chamba, India",
+        "rent": "3500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "1.9 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 73,
+        "category": "rooms",
+        "name": "Sonia Thakur",
+        "location": "Bilaspur, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 74,
+        "category": "rooms",
+        "name": "Ravi Negi",
+        "location": "Bilaspur, India",
+        "rent": "8500",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 75,
+        "category": "rooms",
+        "name": "Priti Sharma",
+        "location": "Gehrwin, Bilaspur, India",
+        "rent": "7500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 76,
+        "category": "rooms",
+        "name": "Sandeep Rana",
+        "location": "Bilaspur, India",
+        "rent": "9000",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 77,
+        "category": "roommates",
+        "name": "Ajay Chauhan",
+        "location": "Bilaspur, India",
+        "rent": "14000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 78,
+        "category": "roommates",
+        "name": "Meena Devi",
+        "location": "Bilaspur, India",
+        "rent": "5000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 79,
+        "category": "roommates",
+        "name": "Vivek Sharma",
+        "location": "Bilaspur, India",
+        "rent": "9000",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 80,
+        "category": "roommates",
+        "name": "Anita Kumari",
+        "location": "Bilaspur, India",
+        "rent": "4500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 81,
+        "category": "pg",
+        "name": "Gobind Sagar PG",
+        "location": "Bilaspur, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 82,
+        "category": "pg",
+        "name": "Lake View PG",
+        "location": "in Bilaspur, India",
+        "rent": "6500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 83,
+        "category": "pg",
+        "name": "Negi PG",
+        "location": "in Gehrwin, Bilaspur, India",
+        "rent": "7000",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.2 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 84,
+        "category": "pg",
+        "name": "Shivalik PG",
+        "location": "in Bilaspur, India",
+        "rent": "3800",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.2 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 85,
+        "category": "rooms",
+        "name": "Rekha Chauhan",
+        "location": "Sundernagar, India",
+        "rent": "6500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 86,
+        "category": "rooms",
+        "name": "Sunil Thakur",
+        "location": "Sundernagar, India",
+        "rent": "8000",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 87,
+        "category": "rooms",
+        "name": "Anjana Singh",
+        "location": "Sundernagar, India",
+        "rent": "7200",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 88,
+        "category": "rooms",
+        "name": "Dinesh Kumar",
+        "location": "Sundernagar, India",
+        "rent": "9000",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 89,
+        "category": "roommates",
+        "name": "Kuldeep Verma",
+        "location": "Sundernagar, India",
+        "rent": "13000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 90,
+        "category": "roommates",
+        "name": "Savita Rani",
+        "location": "Sundernagar, India",
+        "rent": "5000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 91,
+        "category": "roommates",
+        "name": "Naresh Dogra",
+        "location": "Sundernagar, India",
+        "rent": "8000",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 92,
+        "category": "roommates",
+        "name": "Lalita Devi",
+        "location": "Sundernagar, India",
+        "rent": "4000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 93,
+        "category": "pg",
+        "name": "Uhl River PG",
+        "location": "Sundernagar, India",
+        "rent": "5500",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "4.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 94,
+        "category": "pg",
+        "name": "Sunder PG",
+        "location": "in Sundernagar, India",
+        "rent": "6200",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.8 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 95,
+        "category": "pg",
+        "name": "Verma PG",
+        "location": "in Sundernagar, India",
+        "rent": "6800",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 96,
+        "category": "pg",
+        "name": "Maa Shakti PG",
+        "location": "in Sundernagar, India",
+        "rent": "3500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 97,
+        "category": "rooms",
+        "name": "Komal Guleria",
+        "location": "Nurpur, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 98,
+        "category": "rooms",
+        "name": "Manoj Pathania",
+        "location": "Nurpur, India",
+        "rent": "7500",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.8 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 99,
+        "category": "rooms",
+        "name": "Sunaina Sharma",
+        "location": "Nurpur, India",
+        "rent": "6800",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.7 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 100,
+        "category": "rooms",
+        "name": "Kewal Singh",
+        "location": "Nurpur, India",
+        "rent": "8500",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 101,
+        "category": "roommates",
+        "name": "Ramesh Jaswal",
+        "location": "Nurpur, India",
+        "rent": "12000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 102,
+        "category": "roommates",
+        "name": "Priya Devi",
+        "location": "Nurpur, India",
+        "rent": "4500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 103,
+        "category": "roommates",
+        "name": "Sanjay Katoch",
+        "location": "Nurpur, India",
+        "rent": "7500",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 104,
+        "category": "roommates",
+        "name": "Usha Kumari",
+        "location": "Nurpur, India",
+        "rent": "4000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 105,
+        "category": "pg",
+        "name": "Nurpur Residency PG",
+        "location": "Nurpur, India",
+        "rent": "5500",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "3.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 106,
+        "category": "pg",
+        "name": "Fort Nurpur PG",
+        "location": "in Nurpur, India",
+        "rent": "6000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 107,
+        "category": "pg",
+        "name": "Katoch PG",
+        "location": "in Nurpur, India",
+        "rent": "6500",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 108,
+        "category": "pg",
+        "name": "Shanti PG",
+        "location": "in Nurpur, India",
+        "rent": "3200",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 109,
+        "category": "rooms",
+        "name": "Divya Sharma",
+        "location": "Hamirpur, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 110,
+        "category": "rooms",
+        "name": "Aman Verma",
+        "location": "Hamirpur, India",
+        "rent": "8500",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 111,
+        "category": "rooms",
+        "name": "Ranjana Devi",
+        "location": "Nadaun, Hamirpur, India",
+        "rent": "7500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.8 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 112,
+        "category": "rooms",
+        "name": "Vishal Thakur",
+        "location": "Hamirpur, India",
+        "rent": "9500",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 113,
+        "category": "roommates",
+        "name": "Suresh Rathore",
+        "location": "Hamirpur, India",
+        "rent": "15000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 114,
+        "category": "roommates",
+        "name": "Naina Sharma",
+        "location": "Hamirpur, India",
+        "rent": "5500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 115,
+        "category": "roommates",
+        "name": "Kapil Dev",
+        "location": "Hamirpur, India",
+        "rent": "8500",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 116,
+        "category": "roommates",
+        "name": "Manju Bala",
+        "location": "Hamirpur, India",
+        "rent": "4500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 117,
+        "category": "pg",
+        "name": "Hamirpur Heights PG",
+        "location": "Hamirpur, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 118,
+        "category": "pg",
+        "name": "Beas View PG",
+        "location": "in Hamirpur, India",
+        "rent": "6500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.7 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 119,
+        "category": "pg",
+        "name": "Rathore PG",
+        "location": "in Nadaun, Hamirpur, India",
+        "rent": "7200",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 120,
+        "category": "pg",
+        "name": "Anand PG",
+        "location": "in Hamirpur, India",
+        "rent": "4000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.1 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 121,
+        "category": "rooms",
+        "name": "Priyanka Sood",
+        "location": "Solan, India",
+        "rent": "8000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 122,
+        "category": "rooms",
+        "name": "Gaurav Negi",
+        "location": "Solan, India",
+        "rent": "10000",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 123,
+        "category": "rooms",
+        "name": "Monika Gupta",
+        "location": "Salogra, Solan, India",
+        "rent": "8800",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 124,
+        "category": "rooms",
+        "name": "Rohit Sharma",
+        "location": "Solan, India",
+        "rent": "11000",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.7 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 125,
+        "category": "roommates",
+        "name": "Deepak Sood",
+        "location": "Solan, India",
+        "rent": "18000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 126,
+        "category": "roommates",
+        "name": "Kavya Sharma",
+        "location": "Solan, India",
+        "rent": "6500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 127,
+        "category": "roommates",
+        "name": "Sanjeev Gupta",
+        "location": "Solan, India",
+        "rent": "10000",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 128,
+        "category": "roommates",
+        "name": "Puja Devi",
+        "location": "Solan, India",
+        "rent": "5500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 129,
+        "category": "pg",
+        "name": "Mushroom City PG",
+        "location": "Solan, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "3.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 130,
+        "category": "pg",
+        "name": "Solan Heights PG",
+        "location": "in Solan, India",
+        "rent": "7500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 131,
+        "category": "pg",
+        "name": "Gupta PG",
+        "location": "in Salogra, Solan, India",
+        "rent": "8000",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 132,
+        "category": "pg",
+        "name": "Sood PG",
+        "location": "in Solan, India",
+        "rent": "4200",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 133,
+        "category": "rooms",
+        "name": "Seema Thakur",
+        "location": "Kullu, India",
+        "rent": "8000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 134,
+        "category": "rooms",
+        "name": "Navin Chauhan",
+        "location": "Kullu, India",
+        "rent": "9500",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 135,
+        "category": "rooms",
+        "name": "Heena Bhatt",
+        "location": "Dhalpur, Kullu, India",
+        "rent": "8500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 136,
+        "category": "rooms",
+        "name": "Karan Singh",
+        "location": "Kullu, India",
+        "rent": "11000",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.8 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 137,
+        "category": "roommates",
+        "name": "Amit Thakur",
+        "location": "Kullu, India",
+        "rent": "17000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 138,
+        "category": "roommates",
+        "name": "Rekha Negi",
+        "location": "Kullu, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 139,
+        "category": "roommates",
+        "name": "Sudhir Bansal",
+        "location": "Kullu, India",
+        "rent": "9500",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 140,
+        "category": "roommates",
+        "name": "Pooja Sharma",
+        "location": "Kullu, India",
+        "rent": "5000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 141,
+        "category": "pg",
+        "name": "Beas River PG",
+        "location": "Kullu, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "4.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 142,
+        "category": "pg",
+        "name": "Dhalpur PG",
+        "location": "in Dhalpur, Kullu, India",
+        "rent": "7500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.9 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 143,
+        "category": "pg",
+        "name": "Apple Valley PG",
+        "location": "in Kullu, India",
+        "rent": "8200",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.7 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 144,
+        "category": "pg",
+        "name": "Chauhan PG",
+        "location": "in Kullu, India",
+        "rent": "4000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 145,
+        "category": "rooms",
+        "name": "Shilpa Sood",
+        "location": "Mandi, India",
+        "rent": "7500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 146,
+        "category": "rooms",
+        "name": "Nitin Sharma",
+        "location": "Mandi, India",
+        "rent": "9000",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 147,
+        "category": "rooms",
+        "name": "Anita Thakur",
+        "location": "Indira Market, Mandi, India",
+        "rent": "8200",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 148,
+        "category": "rooms",
+        "name": "Pradeep Kumar",
+        "location": "Mandi, India",
+        "rent": "10500",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 149,
+        "category": "roommates",
+        "name": "Vikrant Negi",
+        "location": "Mandi, India",
+        "rent": "16000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 150,
+        "category": "roommates",
+        "name": "Sunita Sharma",
+        "location": "Mandi, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 151,
+        "category": "roommates",
+        "name": "Mohinder Singh",
+        "location": "Mandi, India",
+        "rent": "9500",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 152,
+        "category": "roommates",
+        "name": "Lata Devi",
+        "location": "Mandi, India",
+        "rent": "5000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 153,
+        "category": "pg",
+        "name": "Uhl View PG",
+        "location": "Mandi, India",
+        "rent": "6500",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 154,
+        "category": "pg",
+        "name": "Mandi Town PG",
+        "location": "in Mandi, India",
+        "rent": "7000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.7 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 155,
+        "category": "pg",
+        "name": "Sood PG Mandi",
+        "location": "in Indira Market, Mandi, India",
+        "rent": "7800",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 156,
+        "category": "pg",
+        "name": "Triloknath PG",
+        "location": "in Mandi, India",
+        "rent": "4000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.2 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 157,
+        "category": "rooms",
+        "name": "Neha Rani",
+        "location": "Baddi, India",
+        "rent": "8500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 158,
+        "category": "rooms",
+        "name": "Sumit Aggarwal",
+        "location": "Baddi, India",
+        "rent": "10500",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.2 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 159,
+        "category": "rooms",
+        "name": "Ritu Bala",
+        "location": "Phase 1, Baddi, India",
+        "rent": "9000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 160,
+        "category": "rooms",
+        "name": "Harish Kumar",
+        "location": "Baddi, India",
+        "rent": "12000",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 161,
+        "category": "roommates",
+        "name": "Pawan Sharma",
+        "location": "Baddi, India",
+        "rent": "20000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 162,
+        "category": "roommates",
+        "name": "Shalini Gupta",
+        "location": "Baddi, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 163,
+        "category": "roommates",
+        "name": "Manish Goel",
+        "location": "Baddi, India",
+        "rent": "11000",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 164,
+        "category": "roommates",
+        "name": "Meenakshi Devi",
+        "location": "Baddi, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 165,
+        "category": "pg",
+        "name": "Industrial Area PG",
+        "location": "Baddi, India",
+        "rent": "7500",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "2 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 166,
+        "category": "pg",
+        "name": "Phase 1 PG",
+        "location": "in Phase 1, Baddi, India",
+        "rent": "8000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 167,
+        "category": "pg",
+        "name": "Sharma PG Baddi",
+        "location": "in Baddi, India",
+        "rent": "8500",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.1 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 168,
+        "category": "pg",
+        "name": "Worker's Home PG",
+        "location": "in Baddi, India",
+        "rent": "5000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "1.8 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 169,
+        "category": "rooms",
+        "name": "Alka Sharma",
+        "location": "Nahan, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 170,
+        "category": "rooms",
+        "name": "Arun Thakur",
+        "location": "Nahan, India",
+        "rent": "8500",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 171,
+        "category": "rooms",
+        "name": "Meera Devi",
+        "location": "Nahan, India",
+        "rent": "7800",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.7 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 172,
+        "category": "rooms",
+        "name": "Rahul Rana",
+        "location": "Nahan, India",
+        "rent": "9500",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 173,
+        "category": "roommates",
+        "name": "Dinesh Rana",
+        "location": "Nahan, India",
+        "rent": "14500",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 174,
+        "category": "roommates",
+        "name": "Geeta Sharma",
+        "location": "Nahan, India",
+        "rent": "5500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 175,
+        "category": "roommates",
+        "name": "Sunil Chauhan",
+        "location": "Nahan, India",
+        "rent": "8500",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 176,
+        "category": "roommates",
+        "name": "Asha Rani",
+        "location": "Nahan, India",
+        "rent": "4500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 177,
+        "category": "pg",
+        "name": "Suketi PG",
+        "location": "Nahan, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "3.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 178,
+        "category": "pg",
+        "name": "Nahan View PG",
+        "location": "in Nahan, India",
+        "rent": "6500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.8 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 179,
+        "category": "pg",
+        "name": "Rana PG",
+        "location": "in Nahan, India",
+        "rent": "7200",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 180,
+        "category": "pg",
+        "name": "Sirmaur PG",
+        "location": "in Nahan, India",
+        "rent": "3800",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.2 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 181,
+        "category": "rooms",
+        "name": "Sunita Verma",
+        "location": "Paonta Sahib, India",
+        "rent": "7500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 182,
+        "category": "rooms",
+        "name": "Rajan Gupta",
+        "location": "Paonta Sahib, India",
+        "rent": "9000",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 183,
+        "category": "rooms",
+        "name": "Suman Devi",
+        "location": "Paonta Sahib, India",
+        "rent": "8000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 184,
+        "category": "rooms",
+        "name": "Ashok Singh",
+        "location": "Paonta Sahib, India",
+        "rent": "10000",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 185,
+        "category": "roommates",
+        "name": "Narender Sharma",
+        "location": "Paonta Sahib, India",
+        "rent": "16500",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 186,
+        "category": "roommates",
+        "name": "Kiran Bala",
+        "location": "Paonta Sahib, India",
+        "rent": "5500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 187,
+        "category": "roommates",
+        "name": "Tejinder Singh",
+        "location": "Paonta Sahib, India",
+        "rent": "9000",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 188,
+        "category": "roommates",
+        "name": "Kamlesh Devi",
+        "location": "Paonta Sahib, India",
+        "rent": "5000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 189,
+        "category": "pg",
+        "name": "Yamuna View PG",
+        "location": "Paonta Sahib, India",
+        "rent": "6500",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 190,
+        "category": "pg",
+        "name": "Gurudwara Road PG",
+        "location": "in Paonta Sahib, India",
+        "rent": "7000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 191,
+        "category": "pg",
+        "name": "Gupta PG Paonta",
+        "location": "in Paonta Sahib, India",
+        "rent": "7500",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 192,
+        "category": "pg",
+        "name": "Sahib Nivas PG",
+        "location": "in Paonta Sahib, India",
+        "rent": "4200",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 193,
+        "category": "rooms",
+        "name": "Anita Rani",
+        "location": "Yol, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 194,
+        "category": "rooms",
+        "name": "Rajesh Dogra",
+        "location": "Yol, India",
+        "rent": "7500",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 195,
+        "category": "rooms",
+        "name": "Kanta Devi",
+        "location": "Yol Cantt, India",
+        "rent": "6500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 196,
+        "category": "rooms",
+        "name": "Naresh Kumar",
+        "location": "Yol, India",
+        "rent": "8500",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 197,
+        "category": "roommates",
+        "name": "Baldev Singh",
+        "location": "Yol, India",
+        "rent": "12000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 198,
+        "category": "roommates",
+        "name": "Veena Sharma",
+        "location": "Yol, India",
+        "rent": "4500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 199,
+        "category": "roommates",
+        "name": "Gurpreet Singh",
+        "location": "Yol, India",
+        "rent": "7500",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 200,
+        "category": "roommates",
+        "name": "Bhavna Devi",
+        "location": "Yol, India",
+        "rent": "4000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 201,
+        "category": "pg",
+        "name": "Cantt Area PG",
+        "location": "Yol, India",
+        "rent": "5500",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "2 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 202,
+        "category": "pg",
+        "name": "Yol Camp PG",
+        "location": "in Yol Cantt, India",
+        "rent": "6000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 203,
+        "category": "pg",
+        "name": "Dogra PG",
+        "location": "in Yol, India",
+        "rent": "6500",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.2 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 204,
+        "category": "pg",
+        "name": "Valley PG Yol",
+        "location": "in Yol, India",
+        "rent": "3500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "1.9 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 205,
+        "category": "rooms",
+        "name": "Pooja Rani",
+        "location": "Una, India",
+        "rent": "7000",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 206,
+        "category": "rooms",
+        "name": "Sanjeev Kumar",
+        "location": "Una, India",
+        "rent": "8500",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 207,
+        "category": "rooms",
+        "name": "Ritu Devi",
+        "location": "Amb, Una, India",
+        "rent": "7800",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.8 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 208,
+        "category": "rooms",
+        "name": "Harjeet Singh",
+        "location": "Una, India",
+        "rent": "10000",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 209,
+        "category": "roommates",
+        "name": "Gurdeep Singh",
+        "location": "Una, India",
+        "rent": "15000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 210,
+        "category": "roommates",
+        "name": "Sarla Devi",
+        "location": "Una, India",
+        "rent": "5500",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 211,
+        "category": "roommates",
+        "name": "Prem Chand",
+        "location": "Una, India",
+        "rent": "8500",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 212,
+        "category": "roommates",
+        "name": "Neelam Sharma",
+        "location": "Una, India",
+        "rent": "4800",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 213,
+        "category": "pg",
+        "name": "Swan River PG",
+        "location": "Una, India",
+        "rent": "6000",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 214,
+        "category": "pg",
+        "name": "Una Town PG",
+        "location": "in Una, India",
+        "rent": "6500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.7 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 215,
+        "category": "pg",
+        "name": "Singh PG Una",
+        "location": "in Amb, Una, India",
+        "rent": "7000",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 216,
+        "category": "pg",
+        "name": "Bhangal PG",
+        "location": "in Una, India",
+        "rent": "4000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    },
+    {
+        "id": 217,
+        "category": "rooms",
+        "name": "Savita Sharma",
+        "location": "Nagrota Bagwan, India",
+        "rent": "6500",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 218,
+        "category": "rooms",
+        "name": "Rakesh Guleria",
+        "location": "Nagrota Bagwan, India",
+        "rent": "8000",
+        "looking_for": "Male",
+        "type": "Roommate",
+        "distance": "1.4 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 219,
+        "category": "rooms",
+        "name": "Priti Devi",
+        "location": "Nagrota Bagwan, India",
+        "rent": "7200",
+        "looking_for": "Female",
+        "type": "Roommate",
+        "distance": "2.2 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 220,
+        "category": "rooms",
+        "name": "Charanjit Singh",
+        "location": "Nagrota Bagwan, India",
+        "rent": "9000",
+        "looking_for": "Any",
+        "type": "Roommate",
+        "distance": "3.1 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 221,
+        "category": "roommates",
+        "name": "Kulbir Singh",
+        "location": "Nagrota Bagwan, India",
+        "rent": "13000",
+        "looking_for": "Male",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 222,
+        "category": "roommates",
+        "name": "Pushpa Devi",
+        "location": "Nagrota Bagwan, India",
+        "rent": "5000",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 223,
+        "category": "roommates",
+        "name": "Paramjit Singh",
+        "location": "Nagrota Bagwan, India",
+        "rent": "8000",
+        "looking_for": "Any",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarm.jpg"
+        ]
+    },
+    {
+        "id": 224,
+        "category": "roommates",
+        "name": "Bimla Devi",
+        "location": "Nagrota Bagwan, India",
+        "rent": "4200",
+        "looking_for": "Female",
+        "type": "Room",
+        "distance": "0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/avatarf.jpg"
+        ]
+    },
+    {
+        "id": 225,
+        "category": "pg",
+        "name": "Bagwan Residency PG",
+        "location": "Nagrota Bagwan, India",
+        "rent": "5500",
+        "looking_for": "Female",
+        "type": "PG",
+        "distance": "3.5 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms1/bedroom.png",
+            "images/shimla-rooms1/hall.png",
+            "images/shimla-rooms1/kitchen.png",
+            "images/shimla-rooms1/bathroom.png",
+            "images/shimla-rooms1/balcony.png"
+        ]
+    },
+    {
+        "id": 226,
+        "category": "pg",
+        "name": "Neugal PG",
+        "location": "in Nagrota Bagwan, India",
+        "rent": "6000",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "0.6 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms2/bedroom.png",
+            "images/shimla-rooms2/kitchen.png",
+            "images/shimla-rooms2/bathroom.png",
+            "images/shimla-rooms2/almirah.png"
+        ]
+    },
+    {
+        "id": 227,
+        "category": "pg",
+        "name": "Guleria PG",
+        "location": "in Nagrota Bagwan, India",
+        "rent": "6500",
+        "looking_for": "Male",
+        "type": "PG",
+        "distance": "1.3 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms3/bedroom.png",
+            "images/shimla-rooms3/hall.png",
+            "images/shimla-rooms3/kitchen.png",
+            "images/shimla-rooms3/bathroom.png",
+            "images/shimla-rooms3/balcony.png"
+        ]
+    },
+    {
+        "id": 228,
+        "category": "pg",
+        "name": "Himgiri PG",
+        "location": "in Nagrota Bagwan, India",
+        "rent": "3500",
+        "looking_for": "Any",
+        "type": "PG",
+        "distance": "2.0 km",
+        "mobile": "1234567890",
+        "images": [
+            "images/shimla-rooms4/bedroom.png",
+            "images/shimla-rooms4/kitchen.png",
+            "images/shimla-rooms4/bathroom.png",
+            "images/shimla-rooms4/almirah.png"
+        ]
+    }
+]

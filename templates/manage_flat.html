@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HimRooms</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/manage_flat.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+
+</head>
+
+<body>
+
+    <header class="manage-navbar">
+        <a href="{{ url_for('home') }}">
+            <h2 class="manage-logo">Him<span>Rooms</span><sup>®</sup></h2>
+        </a>
+    </header>
+
+
+    <section class="owner-section">
+
+        <div class="container owner-container">
+
+            <div class="owner-text">
+                <h1>Are you a property owner?</h1>
+
+                <p>
+                    Looking to rent out your property without the hassle of dealing with brokers?
+                    Look no further! Our platform offers a convenient and broker-free solution
+                    to connect you with potential tenants seeking rental properties.
+                </p>
+
+                <a href="{{ url_for('manage_apply') }}" class="owner-btn">Apply Now</a>
+
+            </div>
+
+            <div class="owner-image">
+                <img src="{{ url_for('static', filename='images/sticker.png') }}" alt="owner">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="lpw-section">
+
+        <div class="container lpw-container">
+
+            <!-- Left Image -->
+            <div class="lpw-image-box">
+                <img src="{{ url_for('static', filename='images/sticker2.png') }}" alt="Property Illustration">
+            </div>
+
+            <!-- Right Content -->
+            <div class="lpw-content-box">
+
+                <h2 class="lpw-title">List your property<br>with us</h2>
+
+                <div class="lpw-feature">
+
+                    <div class="lpw-number">1</div>
+
+                    <div class="lpw-feature-text">
+                        <h4>Reach a wide pool of tenants</h4>
+                        <p>
+                            Our platform ensures a seamless experience, allowing you to showcase your property and
+                            attract tenants directly. By bypassing brokers, you save time and avoid unnecessary fees,
+                            making the rental process more efficient and cost-effective.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="lpw-feature">
+
+                    <div class="lpw-number">2</div>
+
+                    <div class="lpw-feature-text">
+                        <h4>Find the perfect tenants</h4>
+                        <p>
+                            We've got you covered! Our user-friendly platform helps you showcase your rental property
+                            and explore the preferences of potential tenants to find the best fit easily.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="lpw-feature">
+
+                    <div class="lpw-number">3</div>
+
+                    <div class="lpw-feature-text">
+                        <h4>Broker-free platform</h4>
+                        <p>
+                            List your property on our platform and attract tenants actively searching for homes like
+                            yours. Enjoy a broker-free rental experience and maximize your chances of finding the right
+                            tenant quickly.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="rent-agreement-section">
+        <div class="container rent-agreement-container">
+            <h2>Create your Rent Agreement Online</h2>
+            <p>100% Reliable | Generate it Online | Free Service</p>
+            <a href="{{ url_for('create') }}" class="rent-agreement-btn">Create now</a>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-col brand">
+                <div class="logo">Him<span>Rooms</span><sup>®</sup></div>
+                <p>Barol , Near Satyam Mega Mart, Dharamshala (Kangra, Himachal Pradesh) </p>
+                <p>dadwalpreeti31@gmail.com</p>
+                <a href="{{ url_for('contact', source='manage-flat') }}"
+                    class="contact-view-btn">Contact</a>
+                <div class="socials">
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="{{url_for('company')}}">Company</a></li>
+                    <li><a href="{{url_for('terms')}}">Terms & Conditions</a></li>
+                    <li><a href="{{url_for('privacy')}}">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Flatmates</h4>
+                <ul>
+                    <li><a href="{{ url_for('city_listings', city_slug='shimla') }}">Rooms in Shimla</a></li>
+                    <li><a href="{{ url_for('city_listings', city_slug='dharamshala') }}">Rooms in Dharamshala</a></li>
+                    <li><a href="{{ url_for('city_listings', city_slug='manali') }}">Rooms in Manali</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="{{url_for('create')}}">Rental Agreement</a></li>
+                    <li><a href="{{url_for('reqver')}}">Tenant Verification</a></li>
+                    <li><a href="{{url_for('rent_rec')}}">Rent Receipt</a></li>
+                    <li><a href="{{url_for('manage_flat')}}">Manage Your Flat</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Product of <strong>MCA Student Project</strong></p>
+            <p>© 2026 HimRooms.in All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,397 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request for Verification</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+    /* Scoped Reset */
+    .rv-page, .rv-page * {
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* Replaces generic body styling */
+    .rv-page {
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .rv-container {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .rv-title {
+        text-align: center;
+        color: #343a40;
+        margin-top: 0;
+        margin-bottom: 30px;
+        position: relative;
+        font-size: 2em;
+    }
+
+    .rv-title::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: #343a40;
+        margin: 10px auto 0;
+    }
+
+    .rv-subtitle {
+        color: #343a40;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 1.17em;
+    }
+
+    .rv-description {
+        color: #6c757d;
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .rv-form-section {
+        margin-bottom: 30px;
+    }
+
+    .rv-input-row {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .rv-input-group {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .rv-input-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #495057;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .rv-input-group input[type="text"],
+    .rv-input-group input[type="email"],
+    .rv-input-group input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #495057;
+    }
+
+    .rv-input-group input:focus {
+        outline: none;
+        border-color: #28a745;
+    }
+
+    .rv-upload-row {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .rv-upload-box {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .rv-upload-box h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #495057;
+        font-weight: 500;
+        font-size: 1em;
+    }
+
+    .rv-file-upload {
+        border: 2px dashed #ced4da;
+        border-radius: 5px;
+        padding: 30px;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        background-color: #f8f9fa;
+        transition: background-color 0.2s;
+    }
+
+    .rv-file-upload:hover {
+        background-color: #e9ecef;
+    }
+
+    .rv-file-upload input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .rv-upload-placeholder {
+        color: #6c757d;
+        font-size: 14px;
+    }
+
+    .rv-upload-icon {
+        font-size: 30px;
+        color: #adb5bd;
+        margin-bottom: 10px;
+    }
+
+    .rv-service-option {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .rv-service-option input[type="checkbox"] {
+        margin-top: 5px;
+        margin-right: 15px;
+        width: 18px;
+        height: 18px;
+        accent-color: #28a745;
+        cursor: pointer;
+    }
+
+    .rv-service-option label {
+        cursor: pointer;
+        color: #495057;
+        flex: 1;
+    }
+
+    .rv-service-option strong {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+
+    .rv-service-option p {
+        margin: 0;
+        color: #6c757d;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .rv-submit-btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .rv-submit-btn:hover {
+        background-color: #218838;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 600px) {
+        .rv-container {
+            padding: 20px;
+        }
+        .rv-input-row {
+            flex-direction: column;
+        }
+        .rv-upload-row {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+<body class="rv-page"> -->
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/reqver.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="rv-page">
+    <div class="rv-container">
+        <h1 class="rv-title">Request for Verification</h1>
+
+        {% if success %}
+        <div
+            style="background-color: #d4edda; color: #155724; padding: 15px; border-radius: 5px; margin-bottom: 20px; text-align: center; border: 1px solid #c3e6cb;">
+            {{ success }}
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div
+            style="background-color: #f8d7da; color: #721c24; padding: 15px; border-radius: 5px; margin-bottom: 20px; text-align: center; border: 1px solid #f5c6cb;">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <form id="reqverForm" action="{{ url_for('reqver') }}" method="POST" enctype="multipart/form-data">
+
+            <div class="rv-form-section">
+                <h3 class="rv-subtitle">Self Information</h3>
+                <p class="rv-description">Please ensure that the information belongs to you, as these details will be
+                    used for contact purposes and to send the final verification report.</p>
+                <div class="rv-input-row">
+                    <div class="rv-input-group">
+                        <label for="rv-name">Name</label>
+                        <input type="text" id="rv-name" name="name" required>
+                    </div>
+                    <div class="rv-input-group">
+                        <label for="rv-mobile">Mobile</label>
+                        <input type="tel" id="rv-mobile" name="mobile" required pattern="^[6-9]\d{9}$"
+                            title="Must be a 10-digit number starting with 6, 7, 8, or 9">
+                    </div>
+                    <div class="rv-input-group">
+                        <label for="rv-email">Email</label>
+                        <input type="email" id="rv-email" name="email" required
+                            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                            title="Please enter a valid email address (e.g., user@example.com)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="rv-form-section">
+                <h3 class="rv-subtitle">Upload Aadhaar</h3>
+                <p class="rv-description">This document should belong to the individual you wish to inquire about.</p>
+                <div class="rv-upload-row">
+                    <div class="rv-upload-box">
+                        <h4>Front Side</h4>
+                        <div class="rv-file-upload">
+                            <input type="file" id="rv-aadhaar-front" name="aadhaar-front"
+                                accept="image/png, image/jpeg, application/pdf" required>
+                            <div class="rv-upload-placeholder" id="placeholder-front">
+                                <div class="rv-upload-icon">📄</div>
+                                <div>Click or Drop Document</div>
+                                <div>(jpg/png/pdf)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rv-upload-box">
+                        <h4>Back Side</h4>
+                        <div class="rv-file-upload">
+                            <input type="file" id="rv-aadhaar-back" name="aadhaar-back"
+                                accept="image/png, image/jpeg, application/pdf" required>
+                            <div class="rv-upload-placeholder" id="placeholder-back">
+                                <div class="rv-upload-icon">📄</div>
+                                <div>Click or Drop Document</div>
+                                <div>(jpg/png/pdf)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rv-form-section">
+                <h3 class="rv-subtitle">Select Service</h3>
+                <p class="rv-description">Please select the services that you want to avail.</p>
+
+                <div class="rv-service-option">
+                    <input type="checkbox" id="rv-identity-verification" name="service" value="Identity Verification">
+                    <label for="rv-identity-verification">
+                        <strong>Identity Verification</strong>
+                        <p>Trust begins with transparency. By opting for our Identity Verification service, you can
+                            authenticate the identity documents, such as Aadhaar, provided by your potential flatmate or
+                            tenant. Our rigorous process ensures the legitimacy of these documents, providing you with
+                            the confidence that your future roommate is genuine and trustworthy.</p>
+                    </label>
+                </div>
+
+                <div class="rv-service-option">
+                    <input type="checkbox" id="rv-criminal-verification" name="service"
+                        value="Criminal Court Verification">
+                    <label for="rv-criminal-verification">
+                        <strong>Criminal Court Verification</strong>
+                        <p>Your safety is non-negotiable. Our Criminal Court Verification goes beyond the surface,
+                            conducting a thorough search of archived digital records from 19,000+ courts. This
+                            comprehensive check unveils any potential criminal history, allowing you to make an informed
+                            decision about the person sharing your living space. Knowing the criminal background
+                            beforehand is a proactive step towards creating a secure home environment.</p>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="rv-submit-btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // 1. Logic to show the uploaded file name inside the box
+    function setupFileUploadFeedback(inputId, placeholderId) {
+        const fileInput = document.getElementById(inputId);
+        const placeholder = document.getElementById(placeholderId);
+
+        fileInput.addEventListener('change', function (event) {
+            // Check if a file was actually selected
+            if (event.target.files.length > 0) {
+                const fileName = event.target.files[0].name;
+                // Replace the icon and text with a green checkmark and the file name
+                placeholder.innerHTML = `
+                    <div class="rv-upload-icon" style="color: #28a745; font-size: 40px; margin-bottom: 5px;">✅</div>
+                    <div style="font-weight: 500; color: #333; font-size: 14px; word-break: break-all;">${fileName}</div>
+                    <div style="color: #6c757d; font-size: 12px; margin-top: 5px;">Click to change</div>
+                `;
+            }
+        });
+    }
+
+    // Attach the logic to both upload boxes
+    setupFileUploadFeedback('rv-aadhaar-front', 'placeholder-front');
+    setupFileUploadFeedback('rv-aadhaar-back', 'placeholder-back');
+
+
+    // 2. Logic to require at least one service checkbox
+    document.getElementById('reqverForm').addEventListener('submit', function (event) {
+        // Grab all checkboxes that have the name="service"
+        const checkboxes = document.querySelectorAll('input[name="service"]');
+        let atLeastOneChecked = false;
+
+        // Loop through them to see if any are checked
+        for (let i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                atLeastOneChecked = true;
+                break; // Stop looking if we found one
+            }
+        }
+
+        // If none are checked, stop the form from submitting and warn the user
+        if (!atLeastOneChecked) {
+            event.preventDefault(); // Stops the submission to Python
+            alert("Please select at least one service (Identity Verification or Criminal Court Verification) before submitting.");
+        }
+    });
+</script>
+
+{% endblock %}
+
+<!-- </body>
+</html> -->

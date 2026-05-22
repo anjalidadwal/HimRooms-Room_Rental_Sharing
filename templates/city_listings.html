@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ city_name }} Listings - HimRooms</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/shimla.css') }}">
+</head>
+
+<body>
+
+    <header class="manage-navbar">
+        <a href="{{ url_for('home') }}">
+            <h2 class="manage-logo">Him<span>Rooms</span><sup>®</sup></h2>
+        </a>
+    </header>
+
+    <div class="rm-wrapper">
+        <div class="rm-breadcrumb">
+            <a href="{{ url_for('home') }}">Home</a> / <a href="#">Property</a> / <span>{{ city_name }}</span>
+        </div>
+
+        <div class="rm-header-actions">
+            <div class="rm-tabs">
+                <a href="{{ url_for('city_listings', city_slug=city_slug) }}" class="rm-tab {% if active_category == 'all' %}rm-active{% endif %}">
+                    <span class="rm-tab-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        </svg>
+                    </span>
+                    All Listing
+                </a>
+                <a href="{{ url_for('city_category_listings', city_slug=city_slug, category='rooms') }}" class="rm-tab {% if active_category == 'rooms' %}rm-active{% endif %}">
+                    <span class="rm-tab-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 7h-9v14h11a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
+                            <path d="M2 17h11v4H2z"></path>
+                        </svg>
+                    </span>
+                    Rooms
+                </a>
+                <a href="{{ url_for('city_category_listings', city_slug=city_slug, category='roommates') }}" class="rm-tab {% if active_category == 'roommates' %}rm-active{% endif %}">
+                    <span class="rm-tab-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </span>
+                    Roommates
+                </a>
+                <a href="{{ url_for('city_category_listings', city_slug=city_slug, category='pg') }}" class="rm-tab {% if active_category == 'pg' %}rm-active{% endif %}">
+                    <span class="rm-tab-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21h18"></path>
+                            <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path>
+                        </svg>
+                    </span>
+                    PG
+                </a>
+            </div>
+
+            <div class="rm-filters">
+                <div class="rm-search-box custom-dropdown-container">
+                    <div class="custom-dropdown-selected" onclick="toggleCityDropdown()">
+                        <div class="selected-left">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span id="currentCityText">{{ city_name }}</span>
+                        </div>
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9l6 6 6-6"></path>
+                        </svg>
+                    </div>
+
+                    <div class="custom-dropdown-options" id="cityOptionsList">
+                        {% for city in cities %}
+                        <a href="{{ url_for('city_listings', city_slug=city.slug) }}" class="city-option {% if city.slug == city_slug %}active{% endif %}">{{ city.name }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="rm-gender-wrapper">
+                    <select class="rm-gender-select" id="genderFilter" onchange="filterByGender()">
+                        <option value="all">Gender (All)</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="any">Any</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="rm-grid">
+            {% for property in listings %}
+            <div class="rm-card" data-gender="{{ property.looking_for | lower }}">
+                <a href="{{ url_for('property_detail', property_id=property.id) }}" style="text-decoration: none; color: inherit;">
+                    <div class="rm-card-top">
+                        <img src="{{ url_for('static', filename=property.images[0]) }}" alt="{{ property.name }}"
+                            class="{% if property.category == 'pg' %}rm-property-img{% else %}rm-avatar{% endif %}" style="cursor: pointer;">
+
+                        <div class="rm-card-info">
+                            <div class="rm-card-header">
+                                <h3>{{ property.name }}</h3>
+                                <p class="rm-location">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px;">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    {{ property.location }}
+                                </p>
+                            </div>
+                            <div class="rm-specs">
+                                <div class="rm-spec-item">
+                                    <span class="rm-spec-label">Rent</span>
+                                    <span class="rm-spec-value">₹ {{ property.rent }}</span>
+                                </div>
+                                <div class="rm-spec-item">
+                                    <span class="rm-spec-label">Looking for</span>
+                                    <span class="rm-spec-value">{{ property.looking_for }}</span>
+                                </div>
+                                {% if property.category != 'pg' %}
+                                <div class="rm-spec-item">
+                                    <span class="rm-spec-label">Type</span>
+                                    <span class="rm-spec-value">{{ property.type }}</span>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="rm-divider"></div>
+                <div class="rm-card-bottom">
+                    <div class="rm-distance"><span class="rm-bold">{{ property.distance }}</span> from your search</div>
+                    <div class="rm-actions">
+                        {% if session.get('logged_in') %}
+                        <button class="rm-action-btn" onclick="openContactModal('{{ property.mobile }}', '{{ property.name }}')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </button>
+                        {% else %}
+                        <button class="rm-action-btn" onclick="openLoginModal()">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </button>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            {% if not listings %}
+            <div style="text-align: center; padding: 50px; color: #666; grid-column: 1 / -1;">
+                <h3>No properties found in {{ city_name }} yet.</h3>
+                <p>Check back later or try another category.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div id="loginReqModal" class="login-req-modal">
+        <div class="login-req-content">
+            <span class="login-req-close" onclick="closeLoginModal()">&times;</span>
+            <div class="login-req-body">
+                <div class="login-req-illustration">
+                    <img src="{{ url_for('static', filename='images/lock.png') }}" alt="Login required">
+                </div>
+                <div class="login-req-text">
+                    <p>In order to proceed ahead, you have to log in</p>
+                    <a href="{{ url_for('login') }}" class="login-req-btn">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactModal" class="login-req-modal">
+        <div class="login-req-content" style="text-align: center; padding: 40px 30px;">
+            <span class="login-req-close" onclick="closeContactModal()">&times;</span>
+            <h2 style="margin-top: 0; color: #333; margin-bottom: 10px;">Contact Owner</h2>
+            <p style="color: #666; font-size: 15px; line-height: 1.5; margin-bottom: 25px;">
+                Great choice! Reach out directly to discuss moving in at <br><strong id="modalPropertyName" style="color: #00b87c;">Property Name</strong>.
+            </p>
+            <div style="background: #f0fdf4; color: #166534; padding: 15px 30px; border-radius: 8px; font-size: 26px; font-weight: bold; letter-spacing: 2px; margin-bottom: 30px; border: 1px dashed #bbf7d0;">
+                +91 <span id="modalPhoneNumber">1234567890</span>
+            </div>
+            <a id="modalCallBtn" href="#" class="login-req-btn" style="text-decoration: none; padding: 12px 40px; font-size: 16px;">Call Now</a>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+    <script>
+        function toggleCityDropdown() {
+            document.getElementById('cityOptionsList').classList.toggle('show');
+        }
+
+        function filterByGender() {
+            const selectedGender = document.getElementById('genderFilter').value;
+            const allCards = document.querySelectorAll('.rm-card');
+            allCards.forEach(card => {
+                const cardGender = card.getAttribute('data-gender');
+                if (selectedGender === 'all' || cardGender === selectedGender || cardGender === 'any') {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.closest('.custom-dropdown-container')) {
+                const list = document.getElementById('cityOptionsList');
+                if (list) list.classList.remove('show');
+            }
+        };
+
+        function openLoginModal() {
+            document.getElementById('loginReqModal').style.display = 'flex';
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginReqModal').style.display = 'none';
+        }
+
+        function openContactModal(number, propertyName) {
+            document.getElementById('modalPhoneNumber').textContent = number;
+            document.getElementById('modalPropertyName').textContent = propertyName;
+            document.getElementById('modalCallBtn').href = 'tel:+91' + number;
+            document.getElementById('contactModal').style.display = 'flex';
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

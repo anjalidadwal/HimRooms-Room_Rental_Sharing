@@ -1,0 +1,335 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Agreement - Annexures</title>
+
+    <style>
+        /* Page Wrapper */
+        .c4-page {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fb;
+            min-height: 100vh;
+            padding: 40px 20px 120px;
+            /* bottom space before footer */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header */
+        .c4-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .c4-header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #445164;
+        }
+
+        .c4-underline {
+            width: 80px;
+            height: 2px;
+            background-color: #445164;
+            margin: 0 auto;
+        }
+
+        /* Layout */
+        .c4-container {
+            display: flex;
+            width: 100%;
+            max-width: 950px;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        /* Steps */
+        .c4-steps {
+            width: 250px;
+        }
+
+        .c4-step {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: #6c757d;
+            font-size: 16px;
+        }
+
+        .c4-step a {
+            text-decoration: none;
+            color: #6c757d;
+        }
+
+        .c4-step a:hover {
+            color: #2c3e50;
+        }
+
+        .c4-active-text {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .c4-circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #adb5bd;
+            margin-right: 12px;
+        }
+
+        .c4-active {
+            background: #2c3e50;
+        }
+
+        /* Form Card */
+        .c4-card {
+            background: white;
+            padding: 45px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e2e8f0;
+            flex-grow: 1;
+        }
+
+        .c4-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .c4-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 35px;
+        }
+
+        /* Grid */
+        .c4-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .c4-grid-header {
+            font-weight: 500;
+            font-size: 1rem;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        /* Inputs */
+        .c4-grid input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            color: #1e293b;
+        }
+
+        .c4-grid input::placeholder {
+            color: #cbd5e1;
+        }
+
+        .c4-grid input:focus {
+            outline: none;
+            border-color: #1db473;
+        }
+
+        /* Action Links */
+        .c4-actions {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .c4-action-link {
+            display: inline-block;
+            color: #4a90e2;
+            text-decoration: none;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        .c4-action-link:hover {
+            text-decoration: underline;
+        }
+
+        #c4-remove-link {
+            display: none;
+        }
+
+        /* Button */
+        .c4-footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .c4-btn {
+            background-color: #1db473;
+            color: white;
+            border: none;
+            padding: 15px 50px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .c4-btn:hover {
+            background-color: #169b62;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .c4-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .c4-steps {
+                width: auto;
+            }
+
+            .c4-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body class="c4-page"> -->
+{% extends "layout.html" %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/create4.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="c4-page">
+    <header class="c4-header">
+        <h1>Rent Agreement</h1>
+        <div class="c4-underline"></div>
+    </header>
+
+    <div class="c4-container">
+
+        <div class="c4-steps">
+
+            <div class="c4-step">
+                <div class="c4-circle {% if session.get('owner_name') %}completed-circle{% endif %}"></div>
+                <a href="{{ url_for('create') }}">Owner Details</a>
+            </div>
+
+            <div class="c4-step">
+                <div class="c4-circle {% if session.get('tenant_name') %}completed-circle{% endif %}"></div>
+                <a href="{{ url_for('create1') }}">Tenant Details</a>
+            </div>
+
+            <div class="c4-step">
+                <div class="c4-circle {% if session.get('prop_city') %}completed-circle{% endif %}"></div>
+                <a href="{{ url_for('create2') }}">Property Details</a>
+            </div>
+
+            <div class="c4-step">
+                <div class="c4-circle {% if session.get('rent_amount') %}completed-circle{% endif %}"></div>
+                <a href="{{ url_for('create3') }}">Agreement Terms</a>
+            </div>
+
+            <div class="c4-step">
+                <div class="c4-circle c4-active"></div>
+                <a href="{{ url_for('create4') }}" class="c4-active-text">Annexures</a>
+            </div>
+
+        </div>
+
+        <main class="c4-card">
+            <h2>Furniture provided</h2>
+            <p class="c4-description">
+                Enter details of furniture / appliances provided to the tenant.
+            </p>
+
+            <form action="{{ url_for('create4') }}" method="POST" id="c4-form">
+                <div class="c4-grid" id="c4-container">
+                    <div class="c4-grid-header">Item</div>
+                    <div class="c4-grid-header">Quantity</div>
+
+                    <input type="text" name="item_1" value="{{ session.get('item_1', '') }}" placeholder="e.g. Fans"
+                        style="text-transform: capitalize;">
+                    <input type="number" name="qty_1" value="{{ session.get('qty_1', '') }}" placeholder="e.g. 3"
+                        min="1">
+                </div>
+
+                <div class="c4-actions">
+                    <a class="c4-action-link" onclick="c4AddRow()">+ Add another Item</a>
+                    <a class="c4-action-link" id="c4-remove-link" onclick="c4RemoveRow()" style="color: #ef4444;">-
+                        Remove Item</a>
+                </div>
+
+                <div class="c4-footer">
+                    <button type="submit" class="c4-btn">
+                        Generate Rent Agreement
+                    </button>
+                </div>
+            </form>
+        </main>
+
+    </div>
+</div>
+
+<script>
+    const c4Container = document.getElementById('c4-container');
+    const c4RemoveLink = document.getElementById('c4-remove-link');
+    let rowCount = 1; // Keep track of rows for dynamic name attributes
+
+    function c4UpdateRemoveVisibility() {
+        if (c4Container.children.length > 4) {
+            c4RemoveLink.style.display = 'inline-block';
+        } else {
+            c4RemoveLink.style.display = 'none';
+        }
+    }
+
+    function c4AddRow() {
+        rowCount++;
+
+        const itemInput = document.createElement('input');
+        itemInput.type = 'text';
+        itemInput.name = 'item_' + rowCount;
+        itemInput.placeholder = 'e.g. Fans';
+        itemInput.style.textTransform = 'capitalize'; // Keep formatting consistent
+
+        const qtyInput = document.createElement('input');
+        qtyInput.type = 'number'; // Force number input
+        qtyInput.name = 'qty_' + rowCount;
+        qtyInput.placeholder = 'e.g. 3';
+        qtyInput.min = '1';
+
+        c4Container.appendChild(itemInput);
+        c4Container.appendChild(qtyInput);
+
+        c4UpdateRemoveVisibility();
+    }
+
+    function c4RemoveRow() {
+        if (c4Container.children.length > 4) {
+            c4Container.removeChild(c4Container.lastElementChild);
+            c4Container.removeChild(c4Container.lastElementChild);
+            rowCount--;
+        }
+        c4UpdateRemoveVisibility();
+    }
+</script>
+{% endblock %}
+<!-- </body>
+
+</html> -->

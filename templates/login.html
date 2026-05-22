@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HimRooms</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            display: flex;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 850px;
+            max-width: 95%;
+        }
+
+        /* Left Side: Illustration */
+        .login-image {
+            flex: 1;
+            background-color: #f0f7f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .login-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Right Side: Form */
+        .login-form-wrapper {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .logo-text span {
+            color: #00b87c;
+        }
+
+        .login-form-wrapper h2 {
+            margin: 0 0 5px 0;
+            color: #333;
+            font-size: 22px;
+        }
+
+        .login-form-wrapper p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .input-group input:focus {
+            border-color: #00b87c;
+        }
+
+        /* Captcha Styling */
+        .captcha-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .captcha-box {
+            background: #f3f4f6;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #333;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            width: 100%;
+            background: #1a202c;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-top: 15px;
+        }
+
+        .btn-primary:hover {
+            background: #2d3748;
+        }
+
+        @media (max-width: 768px) {
+            .login-container {
+                flex-direction: column;
+            }
+
+            .login-image {
+                display: none;
+            }
+
+            /* Hide image on mobile */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="login-image">
+            <img src="{{ url_for('static', filename='images/people.png') }}" alt="Join HimRooms">
+        </div>
+
+        <div class="login-form-wrapper">
+            <a href="{{ url_for('home') }}" class="logo-text">Him<span>Rooms</span><sup>®</sup></a>
+            <h2>Welcome Back</h2>
+            <p>Please enter your details to log in.</p>
+
+            {% if error %}
+            <div
+                style="background-color: #fee2e2; color: #b91c1c; padding: 12px; border-radius: 6px; margin-bottom: 20px; font-size: 14px; font-weight: 500; text-align: center; border: 1px solid #fca5a5;">
+                {{ error }}
+            </div>
+            {% endif %}
+
+            {% if info %}
+            <div
+                style="background-color: #ecfeff; color: #0e7490; padding: 12px; border-radius: 6px; margin-bottom: 20px; font-size: 14px; font-weight: 500; text-align: center; border: 1px solid #a5f3fc;">
+                {{ info }}
+            </div>
+            {% endif %}
+
+            <form action="{{ url_for('login') }}" method="POST">
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" value="{{ prefill_email or '' }}" placeholder="e.g. rahul@example.com" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Send Login OTP &rarr;</button>
+
+                <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #666;">
+                    Don't have an account? <a href="{{ url_for('register') }}"
+                        style="color: #00b87c; font-weight: 600; text-decoration: none;">Register here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let expectedAnswer = 0;
+
+        // Generate a random math question when the page loads
+        function generateCaptcha() {
+            let num1 = Math.floor(Math.random() * 10) + 1;
+            let num2 = Math.floor(Math.random() * 10) + 1;
+            expectedAnswer = num1 + num2;
+            document.getElementById("captchaQuestion").innerText = num1 + " + " + num2 + " =";
+        }
+
+        // Check if the user entered the right answer before submitting the form
+        function validateCaptcha(event) {
+            let userAnswer = parseInt(document.getElementById("captchaAnswer").value);
+            if (userAnswer !== expectedAnswer) {
+                alert("Incorrect Captcha Answer. Please try again.");
+                generateCaptcha(); // Generate a new question
+                document.getElementById("captchaAnswer").value = ""; // Clear the input
+                event.preventDefault(); // Stop the form from submitting
+                return false;
+            }
+            return true; // Allow form submission
+        }
+
+        // Run the generator immediately
+        window.onload = generateCaptcha;
+    </script>
+</body>
+
+</html>

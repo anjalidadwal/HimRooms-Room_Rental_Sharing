@@ -1,0 +1,174 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<section class="hero">
+    <div class="content-wrapper">
+        <div class="badge">Trusted & loved by many users</div>
+        <h1>Find compatible flatmates <br><span>Rooms & PGs</span></h1>
+        <p class="subtitle">Share your room with right roommates</p>
+
+        <div class="hero-dropdown-container">
+            <div class="search-box custom-dropdown-btn" onclick="toggleHeroDropdown()">
+                <span class="icon">📍</span>
+                <span class="hero-search-placeholder" id="heroCityPlaceholder">Search Places...</span>
+                <svg class="dropdown-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+            <div class="hero-options-list" id="heroCityList">
+                {% for city in home_city_cards %}
+                <div class="city-option" onclick='selectHeroCity({{ city.name | tojson }}, {{ city.slug | tojson }})'>{{ city.name }}</div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="top-cities">
+            <strong>Top Cities:</strong>
+            {% for city in top_city_cards %}
+            <a href="{{ url_for('city_listings', city_slug=city.slug) }}">{{ city.name }}</a>{% if not loop.last %},{% endif %}
+            {% endfor %}
+            <span class="arrow">›</span>
+        </div>
+    </div>
+</section>
+
+<div class="himachal-image content-wrapper">
+    <img src="{{ url_for('static', filename='images/him.png') }}" alt="Himachal Illustration">
+</div>
+
+<section class="bg-grey">
+    <div class="content-wrapper split-container">
+        <div class="text-col">
+            <h2>Getting Rental Agreement <br>made easy, quick and <br>affordable</h2>
+            <p>Lowest Price Guaranteed!! Create your rental agreement online in minutes</p>
+            <a href="{{ url_for('new_agreement') }}" class="action-btn">Create Now ></a>
+        </div>
+        <div class="img-col">
+            <img src="{{ url_for('static', filename='images/agg.png') }}" alt="Rental Agreement">
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="content-wrapper split-container">
+        <div class="text-col">
+            <h2>Are you looking for <br> Premium Properties?</h2>
+            <p>View and book your appointment with our partners</p>
+            <a href="{{ url_for('premium') }}" class="action-btn">View Properties ></a>
+        </div>
+        <div class="img-col">
+            <img src="{{ url_for('static', filename='images/room.png') }}" class="premium-img" alt="Premium Room">
+        </div>
+    </div>
+</section>
+
+<section class="bg-grey">
+    <div class="content-wrapper split-container">
+        <div class="text-col">
+            <h2>Don't want to pay<br>security deposit?</h2>
+            <p>Now, with rental bond, your peace of mind is guaranteed!</p>
+            <a href="{{ url_for('apply') }}" class="action-btn">Apply Now ></a>
+        </div>
+        <div class="img-col right-content">
+            <div class="bg-shape shape1"></div>
+            <div class="bg-shape shape2"></div>
+
+            <div class="bond-card card1">
+                <img src="{{ url_for('static', filename='images/woman.png') }}" alt="Bond">
+                <div>
+                    <h3>Rental Guarantee Bond</h3>
+                    <p>Tenant buys the bond for the owner</p>
+                </div>
+            </div>
+            <div class="bond-card card2">
+                <div>
+                    <h3>Liability Payment</h3>
+                    <p>Liabilities paid by tenant as per agreement</p>
+                </div>
+                <img src="{{ url_for('static', filename='images/boy.png') }}" alt="Liability">
+            </div>
+            <div class="bond-card card3">
+                <img src="{{ url_for('static', filename='images/secure.png') }}" alt="Claim">
+                <div>
+                    <h3>Owner Claim</h3>
+                    <p>In case of disputes, owner claims amount</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section2">
+    <div class="content-wrapper">
+        <h2>View rooms in Popular Cities</h2>
+        <div class="grid2">
+            {% for city in home_grid_cards %}
+            <a href="{{ url_for('city_listings', city_slug=city.slug) }}" class="city-card">
+                <img src="{{ url_for('static', filename=city.image) }}" alt="{{ city.name }}">
+            </a>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('cities') }}" class="action-btn" style="margin-top: 50px;">View All Cities ></a>
+    </div>
+</section>
+
+<section class="info-content">
+    <div class="content-wrapper">
+        <h2>How To Unlock Your Ideal Living Space with HimRooms</h2>
+
+        <p>Are you looking for the perfect flat-mate or searching for a room? HimRooms is here to help. With
+            thousands of listings, we make it easy to find a place that feels like home. Let's look at how you
+            can find the perfect pad for you.</p>
+
+        <div class="info-step">
+            <h3>1. Discover your ideal location with HimRooms</h3>
+            <p>The journey commences with HimRooms. Your search for a home starts with choosing a location. We
+                have listings across various cities in Himachal Pradesh to suit your specific geographical
+                preference.</p>
+            <p>Browse through high-quality listings and narrow down your search with filters like budget,
+                amenities, and room type. This means you find the living arrangement that fits your lifestyle
+                and budget.</p>
+        </div>
+
+        <div class="info-step">
+            <h3>2. Explore 100% Brokerage-Free Listings:</h3>
+            <p>At HimRooms, we boast of our "No Brokerage" approach. Why pay extra fees? All listings are 100%
+                brokerage-free, ensuring you save your hard-earned money.</p>
+            <p>We believe in a direct approach between property owners and tenants to make the process
+                transparent and affordable.</p>
+        </div>
+
+        <div class="info-step">
+            <h3>3. Post your requirement and safeguard your Privacy:</h3>
+            <p>Privacy is our priority. When you post a requirement, your contact details are kept secure. You
+                can choose how and when you want to connect with potential flatmates or owners.</p>
+        </div>
+
+        <div class="info-step">
+            <h3>4. Create Teams:</h3>
+            <p>Looking to share a flat? Use our "Create Teams" feature to find like-minded people and rent a
+                full apartment together. It's the best way to live in premium properties while sharing the cost.
+            </p>
+            <p>Ready to find your next home? Start your search now on HimRooms.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // JS remains exactly the same as before
+    function toggleHeroDropdown() { document.getElementById("heroCityList").classList.toggle("show"); }
+    function selectHeroCity(cityName, citySlug) {
+        document.getElementById("heroCityPlaceholder").innerText = cityName;
+        document.getElementById("heroCityPlaceholder").style.color = "#333";
+        document.getElementById("heroCityList").classList.remove("show");
+        window.location.href = "/city/" + citySlug;
+    }
+    window.addEventListener("click", function (event) {
+        if (!event.target.closest('.hero-dropdown-container')) {
+            let dropdown = document.getElementById("heroCityList");
+            if (dropdown && dropdown.classList.contains('show')) dropdown.classList.remove('show');
+        }
+    });
+</script>
+{% endblock %}

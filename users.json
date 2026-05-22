@@ -1,0 +1,49 @@
+{
+    "7070707070": {
+        "name": "Anjali",
+        "city": "Shimla",
+        "avatar": "avatarf.jpg"
+    },
+    "6767676767": {
+        "name": "preeti",
+        "city": "Dharamshala",
+        "avatar": "avatarf.jpg"
+    },
+    "6545454545": {
+        "name": "vinay",
+        "city": "Dharamshala",
+        "avatar": "avatarm.jpg"
+    },
+    "6230213121": {
+        "name": "monu",
+        "city": "Dharamshala",
+        "avatar": "avatarm.jpg"
+    },
+    "shaqueel33@gmail.com": {
+        "name": "Shaqueel Ahmed",
+        "mobile": "9090000900",
+        "city": "Shimla",
+        "avatar": "avatarm.jpg"
+    },
+    "sanjuoffiial794@gmail.com": {
+        "name": "Sanjay Singh",
+        "email": "sanjuoffiial794@gmail.com",
+        "mobile": "8282828822",
+        "city": "Shimla",
+        "avatar": "avatarm.jpg"
+    },
+    "dadwalpreeti31@gmail.com": {
+        "name": "Preeti",
+        "email": "dadwalpreeti31@gmail.com",
+        "mobile": "6767676767",
+        "city": "Dharamshala",
+        "avatar": "avatarf.jpg"
+    },
+    "anjalidadwal14@gmail.com": {
+        "name": "Anjali Dadwal",
+        "email": "anjalidadwal14@gmail.com",
+        "mobile": "9317634642",
+        "city": "Mandi",
+        "avatar": "avatarf.jpg"
+    }
+}

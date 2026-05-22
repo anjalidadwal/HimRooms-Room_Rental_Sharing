@@ -1,0 +1,161 @@
+.c2-page {
+    background: #f8f9fb;
+    min-height: 100vh;
+    padding-top: 40px; /* FIX: Added padding-top */
+    padding-bottom: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Title */
+.c2-title {
+    text-align: center;
+    /* FIX: Removed margin-top */
+}
+
+.c2-title h1 {
+    margin: 0;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.c2-underline {
+    width: 130px;
+    height: 2px;
+    background: #2c3e50;
+    margin: 10px auto 30px;
+}
+
+/* Layout */
+.c2-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+/* Left Steps */
+.c2-steps {
+    width: 250px;
+}
+
+.c2-step {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.c2-step a {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.c2-step a:hover {
+    color: #2c3e50;
+}
+
+.c2-active-text {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.c2-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #adb5bd;
+    margin-right: 12px;
+}
+
+.c2-active {
+    background: #2c3e50;
+}
+
+/* Card */
+.c2-card {
+    width: 520px;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.c2-card h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.c2-subtitle {
+    color: #8a94a6;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.c2-card label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #2c3e50;
+}
+
+/* Inputs */
+.c2-card input,
+.c2-card select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd3dc;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+    box-sizing: border-box;
+    /* FIX: Keeps inputs neatly inside the box */
+}
+
+/* Button */
+.c2-button-box {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.c2-button-box button {
+    background: #1fa463;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.c2-button-box button:hover {
+    background: #188a52;
+}
+
+/* FIX: CSS for a completed step checkmark */
+.completed-circle {
+    background: #1fa463 !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+}
+
+.completed-circle::after {
+    content: '✓';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .c2-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .c2-card {
+        width: 90%;
+    }
+}

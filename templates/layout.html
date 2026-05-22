@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HimRooms Navbar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <span class="flat">Him</span><span class="mate">Rooms</span><sup>®</sup>
+            </a>
+        </div>
+
+        <div class="nav-buttons">
+            {% if session.get('logged_in') %}
+
+            <div class="profile-menu-container">
+                <img src="{{ url_for('static', filename='images/' + session.get('user_avatar')) }}" alt="Profile"
+                    class="nav-avatar-btn" onclick="toggleProfileMenu()">
+
+                <div class="profile-dropdown" id="navProfileMenu">
+                    <div class="profile-header">
+                        <h4>{{ session.get('user_name') }}</h4>
+                        <p>Searching in: {{ session.get('user_city') }}</p>
+                        {% if session.get('user_mobile') %}
+                        <p style="color: #888; font-size: 12px; margin-top: 5px;">+91 {{ session.get('user_mobile') }}
+                        </p>
+                        {% endif %}
+                    </div>
+                    <div class="profile-links">
+                        <a href="{{ url_for('logout') }}" class="logout-text">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                stroke-width="2" style="vertical-align: middle; margin-right: 5px;">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {% else %}
+            <a href="{{ url_for('login') }}" class="login-btn">Login / Register</a>
+            {% endif %}
+
+            <a href="{{ url_for('contact', source='navbar') }}" class="download-btn">Contact</a>
+            <!-- <a href="{{ url_for('login') }}" class="login-btn">Login / Register</a>
+            <a href="{{ url_for('contact') }}" class="download-btn">Contact</a> -->
+        </div>
+    </nav>
+
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+
+    {% include 'footer.html' %}
+
+    <!-- <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-col brand">
+                <div class="logo">Him<span>Rooms</span><sup>®</sup></div>
+                <p>Barol , near Satyam mega mart Dharamshala (kangra) Himachal Pradesh </p>
+                <p>dadwalpreeti31@gmail.com</p>
+                <a href="{{ url_for('contact') }}">
+                    <button class="btn-green contact">Contact us</button>
+                </a>
+                <div class="socials">
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="{{url_for('company')}}">Company</a></li>
+                    <li><a href="{{url_for('terms')}}">Terms & Conditions</a></li>
+                    <li><a href="{{url_for('privacy')}}">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Flatmates</h4>
+                <ul>
+                    <li><a href="{{url_for('shimla')}}">Rooms in Shimla</a></li>
+                    <li>Rooms in Dharamshala</li>
+                    <li>Rooms in Manali</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="{{url_for('create')}}">Rental Agreement</a></li>
+                    <li><a href="{{url_for('reqver')}}">Tenant Verification</a></li>
+                    <li><a href="{{url_for('rent_rec')}}">Rent Receipt</a></li>
+                    <li><a href="{{url_for('manage_flat')}}">Manage Your Flat</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Product of <strong>Think Straight IT LLP</strong></p>
+            <div class="useful-links">Useful Links <i class="fas fa-chevron-down"></i></div>
+            <p>© 2026 HimRooms.in All Rights Reserved</p>
+        </div>
+    </footer> -->
+
+    <script>
+        // Function to toggle the profile menu
+        function toggleProfileMenu() {
+            document.getElementById("navProfileMenu").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks anywhere else on the screen
+        window.onclick = function (event) {
+            if (!event.target.matches('.nav-avatar-btn')) {
+                var dropdowns = document.getElementsByClassName("profile-dropdown");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

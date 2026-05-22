@@ -1,0 +1,326 @@
+/* css of create.html */
+
+/* .ra-page {
+    background-color: #f4f6f8;
+    padding-bottom: 60px;
+} */
+
+/* Heading */
+/* .ra-header {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.ra-header h1 {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.ra-header .ra-line {
+    width: 120px;
+    height: 3px;
+    background: #2c3e50;
+    margin: 10px auto;
+} */
+
+/* Main Layout */
+/* .ra-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    gap: 40px;
+} */
+
+/* Left Steps */
+/* .ra-steps {
+    width: 250px;
+}
+
+.ra-step {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.ra-step-link {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.ra-step-link:hover {
+    color: #2c3e50;
+}
+
+.ra-active-text {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.ra-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #adb5bd;
+    margin-right: 12px;
+}
+
+.ra-active {
+    background: #2c3e50;
+} */
+
+/* Right Card */
+/* .ra-card {
+    background: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 80px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ra-card h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.ra-card p {
+    color: #6c757d;
+    margin-bottom: 20px;
+} */
+
+/* Form */
+/* .ra-card label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.ra-card input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 14px;
+}
+
+.ra-card input:focus {
+    outline: none;
+    border-color: #2c7be5;
+} */
+
+/* Button */
+/* .ra-button-box {
+    margin-top: 25px;
+    text-align: right;
+}
+
+.ra-button-box button {
+    background: #20c997;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ra-button-box button:hover {
+    background: #17a589;
+} */
+
+/* CSS for a completed step */
+/* .ra-completed (or .c1-completed, etc.) {
+    background: #1fa463 !important; 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ra-completed::after {
+    content: '✓';
+    font-size: 12px;
+    font-weight: bold;
+} */
+
+/* Responsive */
+/* @media(max-width:768px) {
+    .ra-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ra-card {
+        width: 90%;
+    }
+} */
+
+/* css of create.html */
+
+/* Shared styles for Multi-Step Rent Agreement Forms */
+
+/* Page structure with bottom padding */
+.multi-step-form-page {
+    background-color: #f8f9fb;
+    padding-top: 40px; /* FIX: Added padding-top to the container */
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+
+.multi-step-form-header {
+    text-align: center;
+    /* FIX: Removed margin-top to stop the gap */
+}
+
+.multi-step-form-header h1 {
+    font-weight: 500;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+}
+
+.multi-step-form-underline {
+    width: 120px;
+    height: 3px;
+    background: #2c3e50;
+    margin: 0 auto 30px;
+}
+
+/* Two-column layout container (Flexbox) */
+.form-layout-cols {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+/* --- Left Sidebar Steps Component --- */
+.sidebar-steps-list {
+    width: 250px;
+}
+
+.step-item-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.step-item-wrapper a {
+    text-decoration: none;
+    color: inherit; /* inherit color from wrapper */
+}
+
+.step-item-wrapper a:hover {
+    color: #2c3e50;
+}
+
+.step-icon-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #adb5bd;
+    margin-right: 12px;
+}
+
+/* State structural variants for steps */
+.step-item-wrapper.active {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.step-item-wrapper.active .step-icon-circle {
+    background: #2c3e50;
+}
+
+/* FIX: Universal CSS for a completed step */
+.completed-circle {
+    background: #1fa463 !important; /* Green color */
+    color: white !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+}
+
+.completed-circle::after {
+    content: '✓';
+    font-size: 14px;
+    font-weight: bold;
+}
+/* ------------------------------------- */
+
+
+/* --- Right Card with Form Component --- */
+.content-form-card {
+    background: white;
+    width: 100%; /* Important, can be constrained by max-width or set explicitly */
+    max-width: 450px; /* target card width from target */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* important to prevent width issues with padding */
+}
+
+.content-form-card h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.content-form-card .subtitle {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+/* Professional vertical form stacking inside card */
+.multi-step-vertical-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.multi-step-vertical-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.multi-step-vertical-form input,
+.multi-step-vertical-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 14px;
+    box-sizing: border-box; /* important to prevent width issues with padding */
+}
+
+.multi-step-vertical-form input:focus,
+.multi-step-vertical-form select:focus {
+    outline: none;
+    border-color: #2c7be5;
+}
+
+/* Aligned action container for the submit button */
+.aligned-action-footer {
+    margin-top: 25px;
+    text-align: right;
+}
+
+.aligned-action-footer button {
+    background: #20c997;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.aligned-action-footer button:hover {
+    background: #17a589;
+}

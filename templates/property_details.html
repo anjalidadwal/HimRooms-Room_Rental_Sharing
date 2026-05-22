@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ property.name }} - HimRooms</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/shimla.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/property_details.css') }}">
+</head>
+
+<body>
+
+    <header class="manage-navbar">
+        <a href="{{ url_for('home') }}">
+            <h2 class="manage-logo">Him<span>Rooms</span><sup>®</sup></h2>
+        </a>
+    </header>
+
+    <main class="pd-page">
+        <div class="pd-wrapper">
+            <div class="pd-breadcrumb">
+                <a href="{{ url_for('home') }}">Home</a>
+                <span>/</span>
+                <a href="{{ url_for('city_listings', city_slug=city_slug) }}">{{ city_name }}</a>
+                <span>/</span>
+                <span>{{ property.name }}</span>
+            </div>
+
+            <section class="pd-hero">
+                <div class="pd-hero-copy">
+                    <p class="pd-kicker">{{ property.category | upper }}</p>
+                    <h1>{{ property.name }}</h1>
+                    <p class="pd-subtitle">{{ property.location }}</p>
+
+                    <div class="pd-badges">
+                        <span class="pd-badge">₹ {{ property.rent }}</span>
+                        <span class="pd-badge">{{ property.type }}</span>
+                        <span class="pd-badge">Looking for {{ property.looking_for }}</span>
+                    </div>
+
+                    <div class="pd-quick-stats">
+                        <div>
+                            <span class="pd-stat-label">Distance</span>
+                            <strong>{{ property.distance }}</strong>
+                        </div>
+                        <div>
+                            <span class="pd-stat-label">Mobile</span>
+                            {% if session.get('logged_in') %}
+                            <strong>+91 {{ property.mobile }}</strong>
+                            {% else %}
+                            <strong>Login to view</strong>
+                            {% endif %}
+                        </div>
+                        <div>
+                            <span class="pd-stat-label">Listing type</span>
+                            <strong>{{ property.category | title }}</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="pd-hero-card">
+                    <img src="{{ url_for('static', filename=cover_image) }}" alt="{{ property.name }}" class="pd-avatar">
+                    <div class="pd-hero-card-body">
+                        <div>
+                            <p class="pd-card-label">Contact owner</p>
+                            <h2>{{ property.name }}</h2>
+                        </div>
+                        <div class="pd-profile-actions">
+                            {% if session.get('logged_in') %}
+                            <button class="pd-action-btn chat" type="button" onclick='openContactModal({{ property.mobile | tojson }}, {{ property.name | tojson }}, "chat")'>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Chat
+                            </button>
+                            <button class="pd-action-btn call" type="button" onclick='openContactModal({{ property.mobile | tojson }}, {{ property.name | tojson }}, "call")'>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                Call
+                            </button>
+                            {% else %}
+                            <button class="pd-action-btn chat" type="button" onclick='openContactModal({{ property.mobile | tojson }}, {{ property.name | tojson }}, "chat")'>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Chat
+                            </button>
+                            <button class="pd-action-btn call" type="button" onclick='openContactModal({{ property.mobile | tojson }}, {{ property.name | tojson }}, "call")'>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                Call
+                            </button>
+                            {% endif %}
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="pd-content-grid">
+                <article class="pd-panel pd-gallery-panel">
+                    <div class="pd-panel-head">
+                        <div>
+                            <p class="pd-panel-eyebrow">Pictures</p>
+                            <h2>Gallery</h2>
+                        </div>
+                        <p class="pd-panel-note">Browse the images attached to this listing.</p>
+                    </div>
+
+                    <div class="pd-gallery-shell">
+                        <button class="pd-gallery-nav prev" type="button" onclick="changeSlide(-1)">&#10094;</button>
+                        <img id="galleryMainImg" src="{{ url_for('static', filename=cover_image) }}" alt="Gallery View">
+                        <button class="pd-gallery-nav next" type="button" onclick="changeSlide(1)">&#10095;</button>
+                    </div>
+
+                    <div class="pd-gallery-thumbnails" id="galleryThumbnails">
+                        {% for img in gallery_images %}
+                        <button type="button" class="pd-thumb {% if loop.first %}active{% endif %}" onclick="selectSlide({{ loop.index0 }})">
+                            <img src="{{ url_for('static', filename=img) }}" alt="Thumbnail {{ loop.index }}">
+                        </button>
+                        {% endfor %}
+                    </div>
+                </article>
+
+                <aside class="pd-panel pd-info-panel">
+                    <div class="pd-panel-head">
+                        <div>
+                            <p class="pd-panel-eyebrow">About</p>
+                            <h2>Profile details</h2>
+                        </div>
+                    </div>
+
+                    {% if session.get('logged_in') %}
+                    <div class="pd-summary-card">
+                        <p>
+                            This listing is part of the {{ city_name }} properties feed. The available data from data.json is shown below so visitors can quickly review the owner, rent, and property type before contacting them.
+                        </p>
+                    </div>
+
+                    <div class="pd-spec-grid">
+                        <div class="pd-spec-card">
+                            <span>Looking for</span>
+                            <strong>{{ property.looking_for }}</strong>
+                        </div>
+                        <div class="pd-spec-card">
+                            <span>Approx rent</span>
+                            <strong>₹ {{ property.rent }}</strong>
+                        </div>
+                        <div class="pd-spec-card">
+                            <span>Type</span>
+                            <strong>{{ property.type }}</strong>
+                        </div>
+                        <div class="pd-spec-card">
+                            <span>Distance</span>
+                            <strong>{{ property.distance }}</strong>
+                        </div>
+                    </div>
+
+                    <div class="pd-location-card">
+                        <p class="pd-location-label">Location</p>
+                        <div class="pd-location-value">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <p>{{ property.location }}</p>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="pd-summary-card pd-locked-card">
+                        <p>
+                            In order to proceed ahead, you have to log in.
+                            Please login to view full details and contact information for this listing.
+                        </p>
+                        <a href="{{ url_for('login') }}" class="login-req-btn pd-call-link">Login</a>
+                    </div>
+                    {% endif %}
+                </aside>
+            </section>
+        </div>
+    </main>
+
+    <div id="loginReqModal" class="login-req-modal">
+        <div class="login-req-content pd-contact-card">
+            <span class="login-req-close" onclick="closeLoginModal()">&times;</span>
+            <p class="pd-panel-eyebrow">Login Required</p>
+            <h2>Login to continue</h2>
+            <p class="pd-contact-copy">
+                In order to proceed ahead, you have to log in.
+            </p>
+            <a href="{{ url_for('login') }}" class="login-req-btn pd-call-link">Login</a>
+        </div>
+    </div>
+
+    <div id="contactModal" class="login-req-modal">
+        <div class="login-req-content pd-contact-card">
+            <span class="login-req-close" onclick="closeContactModal()">&times;</span>
+            <p class="pd-panel-eyebrow">Contact</p>
+            <h2 id="modalContactHeading">Contact owner</h2>
+            <p class="pd-contact-copy" id="modalContactMessage">
+                Great choice! Reach out directly to discuss moving in at <strong id="modalPropertyName">Property Name</strong>.
+            </p>
+            <div class="pd-phone-pill">
+                +91 <span id="modalPhoneNumber">1234567890</span>
+            </div>
+            <a id="modalActionBtn" href="#" class="login-req-btn pd-call-link">Call Now</a>
+        </div>
+    </div>
+
+    <script>
+        let currentImageIndex = 0;
+        const galleryImages = {{ (gallery_images or [cover_image]) | tojson }};
+
+        function updateMainImage() {
+            const mainImg = document.getElementById('galleryMainImg');
+            if (!galleryImages.length || !mainImg) {
+                return;
+            }
+
+            mainImg.src = '/static/' + galleryImages[currentImageIndex];
+            updateThumbnailHighlight();
+        }
+
+        function changeSlide(direction) {
+            if (!galleryImages.length) {
+                return;
+            }
+
+            currentImageIndex += direction;
+            if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = 0;
+            } else if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            }
+
+            updateMainImage();
+        }
+
+        function selectSlide(index) {
+            if (!galleryImages.length) {
+                return;
+            }
+
+            currentImageIndex = index;
+            updateMainImage();
+        }
+
+        function updateThumbnailHighlight() {
+            const thumbs = document.querySelectorAll('.pd-thumb');
+            thumbs.forEach((thumb, index) => {
+                if (index === currentImageIndex) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+        }
+
+        function openContactModal(phoneNumber, propertyName, actionType) {
+            document.getElementById('modalPropertyName').innerText = propertyName;
+            document.getElementById('modalPhoneNumber').innerText = phoneNumber;
+
+            const actionBtn = document.getElementById('modalActionBtn');
+            const heading = document.getElementById('modalContactHeading');
+            if (actionType === 'chat') {
+                heading.innerText = 'Contact owner (Chat)';
+                actionBtn.href = 'https://wa.me/91' + phoneNumber;
+                actionBtn.target = '_blank';
+                actionBtn.rel = 'noopener noreferrer';
+                actionBtn.innerText = 'Chat Now';
+            } else {
+                heading.innerText = 'Contact owner (Call)';
+                actionBtn.href = 'tel:+91' + phoneNumber;
+                actionBtn.removeAttribute('target');
+                actionBtn.removeAttribute('rel');
+                actionBtn.innerText = 'Call Now';
+            }
+
+            document.getElementById('contactModal').style.display = 'flex';
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+
+        function openLoginModal() {
+            document.getElementById('loginReqModal').style.display = 'flex';
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginReqModal').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            updateThumbnailHighlight();
+        });
+
+        window.onclick = function (event) {
+            const contactModal = document.getElementById('contactModal');
+            const loginReqModal = document.getElementById('loginReqModal');
+            if (event.target === contactModal) {
+                contactModal.style.display = 'none';
+            }
+            if (event.target === loginReqModal) {
+                loginReqModal.style.display = 'none';
+            }
+        };
+    </script>
+
+    {% include 'footer.html' %}
+</body>
+</html>

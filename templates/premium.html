@@ -1,0 +1,232 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shimla Rental Properties</title>
+
+  <style>
+    /* Scope everything inside .pm-page */
+    .pm-page {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #ffffff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .pm-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Tabs */
+    .pm-tabs {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .pm-tabs a {
+      text-decoration: none;
+      color: #9ca3af;
+      padding-bottom: 12px;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .pm-tabs a.pm-active {
+      color: #374151;
+    }
+
+    .pm-tabs a.pm-active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #374151;
+    }
+
+    /* Banner */
+    .pm-banner {
+      background: #e6fcf5;
+      color: #065f46;
+      padding: 12px 16px;
+      border-left: 4px solid #10b981;
+      margin: 16px 0 32px 0;
+      font-size: 0.9rem;
+      width: fit-content;
+    }
+
+    /* Grid */
+    .pm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      margin: 24px 0;
+    }
+
+    .pm-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .pm-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .pm-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .pm-card-content {
+      padding: 16px;
+    }
+
+    .pm-badge {
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .pm-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #4b5563;
+    }
+
+    .pm-location {
+      color: #9ca3af;
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+    }
+
+    .pm-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .pm-price {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #4b5563;
+    }
+
+    .pm-price span {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      font-weight: 400;
+      margin-left: 4px;
+    }
+
+    .pm-btn {
+      background: transparent;
+      color: #10b981;
+      border: 1px solid #10b981;
+      padding: 6px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .pm-btn:hover {
+      background: #10b981;
+      color: white;
+    }
+
+    /* Premium Heading */
+    .pm-heading {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 48px 0 24px;
+      color: #4b5563;
+      border-top: 1px solid #eaeaea;
+      padding-top: 32px;
+    }
+  </style>
+</head>
+
+<body> -->
+{% extends "layout.html" %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/premium.css') }}">
+{% endblock %}
+{% block body %}
+<div class="pm-page">
+  <div class="pm-container">
+    <div class="pm-tabs">
+      {% for city in cities %}
+      <a href="{{ url_for('premium', city=city.slug) }}" class="{% if city.slug == active_city_slug %}pm-active{% endif %}">
+        {{ city.name }}
+      </a>
+      {% endfor %}
+    </div>
+    <div class="pm-banner">
+      All the properties listed here have all basic amenities like Wi-Fi, furnishing, etc
+    </div>
+
+    <div class="pm-grid">
+      {% for item in listings %}
+      <div class="pm-card">
+        <a href="{{ url_for('premium_property_detail', property_id=item.premium_id) }}" class="pm-card-link">
+          <img src="{{ item.image }}" alt="{{ item.title }}">
+        </a>
+        <div class="pm-card-content">
+          {% if item.badge %}
+          <div class="pm-badge">{{ item.badge }}</div>
+          {% endif %}
+          <a href="{{ url_for('premium_property_detail', property_id=item.premium_id) }}" class="pm-title-link">
+            <div class="pm-title">{{ item.title }}</div>
+          </a>
+          <div class="pm-location">{{ item.location }}</div>
+          <div class="pm-price-row">
+            <div class="pm-price">₹{{ item.price }} <span>Rent</span></div>
+            <a href="{{ url_for('premium_property_detail', property_id=item.premium_id) }}" class="pm-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if not listings %}
+    <div class="pm-empty">No premium properties found for this city yet.</div>
+    {% endif %}
+
+    <div class="pm-heading">Premium Properties in {{ active_city_name }}</div>
+    <div class="pm-other-cities">
+      <div class="pm-other-label">Other Cities:</div>
+      <div class="pm-city-links">
+        {% for city in cities %}
+        <a href="{{ url_for('premium', city=city.slug) }}" class="{% if city.slug == active_city_slug %}pm-city-active{% endif %}">
+          {{ city.name }} ({{ city.count }})
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+<!-- </body>
+
+</html> -->

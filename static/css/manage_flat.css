@@ -1,0 +1,235 @@
+body{
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.manage-navbar {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+    /* Change to 'flex-start' if you want the logo on the left */
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+/* Removes the underline from the anchor link wrapping the logo */
+.manage-navbar a {
+    text-decoration: none;
+}
+
+/* Consolidated logo styling */
+.manage-logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2d2d2d;
+    /* Dark gray for "Him" */
+    margin: 0;
+    /* Removes default h2 spacing */
+}
+
+/* Applies the green color specifically to the "Rooms" part */
+.manage-logo span {
+    color: #3bb273;
+}
+
+/* ===== Property Owner Section (Collision Free) ===== */
+
+.owner-section {
+    padding: 80px 10%;
+    background: linear-gradient(90deg, #c8e6d7, #f3f3f3);
+}
+
+.owner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.owner-text {
+    max-width: 500px;
+}
+
+.owner-text h1 {
+    font-size: 42px;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.owner-text p {
+    font-size: 18px;
+    color: #6b7280;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.owner-btn {
+    background: #22c55e;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.owner-btn:hover {
+    background: #16a34a;
+}
+
+.owner-image {
+    text-align: center;
+}
+
+.owner-image img {
+    width: 420px;
+    max-width: 100%;
+}
+
+.lpw-section {
+    width: 100%;
+    padding: 80px 0;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Layout */
+.lpw-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+/* Left image */
+.lpw-image-box {
+    flex: 1;
+}
+
+.lpw-image-box img {
+    width: 70%;
+    max-width: 400px;
+    border-radius: 25px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Right content */
+.lpw-content-box {
+    flex: 1;
+}
+
+/* Title */
+.lpw-title {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #000;
+    line-height: 1.2;
+}
+
+/* Feature block */
+.lpw-feature {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+/* Number circle */
+.lpw-number {
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #3b82f6;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Feature text */
+.lpw-feature-text h4 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #111;
+}
+
+.lpw-feature-text p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media(max-width:900px) {
+
+    .lpw-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lpw-feature {
+        justify-content: center;
+    }
+
+}
+
+/* --- Rent Agreement Section --- */
+.rent-agreement-section {
+    /* Uses a subtle pale yellow gradient fading to white, matching the image */
+    background: linear-gradient(to right, #FCFCE5, #FEFEF9);
+    padding: 80px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    /* Adjust to match your global font */
+}
+
+.rent-agreement-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rent-agreement-container h2 {
+    color: #122B3E;
+    /* Dark navy/slate color from the image */
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.rent-agreement-container p {
+    color: #8C9398;
+    /* Grayish text color */
+    font-size: 14px;
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+
+.rent-agreement-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #000000;
+    background-color: transparent;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.rent-agreement-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}

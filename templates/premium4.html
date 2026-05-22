@@ -1,0 +1,264 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<style>
+  /* --- NEW: Background Wrapper to mimic a popup over a property --- */
+  .pm4-bg-wrapper {
+    min-height: calc(100vh - 70px);
+    position: relative;
+    /* Beautiful premium room background */
+    background-image: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Overlay / Backdrop */
+  .modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  /* Modal container */
+  .modal {
+    background: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #6b7280;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    z-index: 10;
+  }
+
+  .close-btn:hover {
+    color: #111;
+  }
+
+  /* Form Styles */
+  .modal-header {
+    padding: 24px 24px 8px;
+    text-align: center;
+  }
+
+  .modal-title {
+    font-size: 1.38rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+
+  .modal-body {
+    padding: 0 24px 32px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 6px;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="datetime-local"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #111827;
+    background: #f9fafb;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 12px;
+  }
+
+  .submit-btn:hover {
+    background: #059669;
+  }
+
+  /* Login Prompt Styles */
+  .login-prompt-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 40px 30px;
+    gap: 25px;
+  }
+
+  .login-prompt-img {
+    width: 140px;
+    flex-shrink: 0;
+  }
+
+  .login-prompt-text {
+    font-size: 1.15rem;
+    color: #374151;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .btn-login-green {
+    background-color: #00c853;
+    color: white;
+    text-decoration: none;
+    padding: 10px 35px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-block;
+    transition: background 0.2s;
+  }
+
+  .btn-login-green:hover {
+    background-color: #00b34a;
+  }
+
+  /* Success Message Styles */
+  .success-box {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .success-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+
+  .success-text {
+    font-size: 1.05rem;
+    color: #059669;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+</style>
+
+<div class="pm4-bg-wrapper">
+  <div class="modal-overlay">
+    <div class="modal">
+
+      <button class="close-btn" onclick="window.history.back();">×</button>
+
+      {% if not session.get('logged_in') %}
+      <div class="login-prompt-wrapper">
+        <img src="https://img.freepik.com/free-vector/privacy-policy-concept-illustration_114360-7853.jpg"
+          alt="Login Required" class="login-prompt-img">
+
+        <div>
+          <div class="login-prompt-text">
+            In order to proceed ahead, you have to log in
+          </div>
+          <a href="{{ url_for('login') }}" class="btn-login-green">Login</a>
+        </div>
+      </div>
+
+      {% elif success_message %}
+      <div class="modal-header">
+        <h2 class="modal-title">Request Sent</h2>
+      </div>
+      <div class="modal-body">
+        <div class="success-box">
+          <div class="success-icon">✅</div>
+          <div class="success-text">{{ success_message }}</div>
+          <a href="{{ url_for('premium_property_detail', property_id=property_id) }}" class="submit-btn"
+            style="text-decoration: none; display: block; box-sizing: border-box;">Return to Properties</a>
+        </div>
+      </div>
+
+      {% else %}
+      <div class="modal-header">
+        <h2 class="modal-title">Enter details to book visit</h2>
+      </div>
+      <div class="modal-body">
+        <form action="{{ url_for('premium4', property_id=property_id) }}" method="POST">
+
+          <input type="hidden" name="property_title" value="{{ property_title }}">
+
+          {% if property_title %}
+          <div style="text-align: center; margin-bottom: 20px; color: #10b981; font-weight: 600;">
+            Booking for: {{ property_title }}
+          </div>
+          {% endif %}
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="{{ session.get('user_name', '') }}"
+              placeholder="Enter your full name" style="text-transform: uppercase;" required>
+          </div>
+
+          <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <input type="tel" id="mobile" name="mobile" value="{{ session.get('user_mobile', '') }}"
+              placeholder="Enter your 10-digit number" pattern="[6-9][0-9]{9}"
+              title="Valid 10-digit Indian mobile number required" maxlength="10" required>
+          </div>
+
+          <div class="form-group">
+            <label for="visit-datetime">Date & Time of Visit</label>
+            <input type="datetime-local" id="visit-datetime" name="visit_datetime" required>
+          </div>
+
+          <button type="submit" class="submit-btn">Book Visit</button>
+        </form>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+{% endblock %}

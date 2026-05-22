@@ -1,0 +1,163 @@
+.c1-page {
+    background-color: #f4f6f8;
+    min-height: 70vh; 
+    padding-top: 40px; 
+    padding-bottom: 40px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Heading */
+.c1-header {
+    text-align: center;
+}
+
+.c1-header h1 {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.c1-line {
+    width: 120px;
+    height: 3px;
+    background: #2c3e50;
+    margin: 10px auto;
+}
+
+/* Main Layout */
+.c1-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+/* Left Steps */
+.c1-steps {
+    width: 250px;
+}
+
+.c1-step {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.c1-step a {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.c1-step a:hover {
+    color: #2c3e50;
+}
+
+.c1-active-text {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.c1-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #adb5bd;
+    margin-right: 12px;
+}
+
+.c1-active {
+    background: #2c3e50;
+}
+
+/* Right Card */
+.c1-card {
+    background: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.c1-card h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.c1-subtitle {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.c1-card label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.c1-card input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 14px;
+    box-sizing: border-box;
+    /* FIX: Keeps inputs inside the card! */
+}
+
+.c1-card input:focus {
+    outline: none;
+    border-color: #2c7be5;
+}
+
+/* Button */
+.c1-button {
+    margin-top: 25px;
+    text-align: right;
+}
+
+.c1-button button {
+    background: #20c997;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.c1-button button:hover {
+    background: #17a589;
+}
+
+/* FIX: CSS for a completed step checkmark */
+.completed-circle {
+    background: #1fa463 !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+}
+
+.completed-circle::after {
+    content: '✓';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .c1-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .c1-card {
+        width: 90%;
+    }
+}

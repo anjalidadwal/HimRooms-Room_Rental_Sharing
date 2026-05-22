@@ -1,0 +1,145 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions</title>
+
+    <style>
+        /* Reset scoped only to this page */
+        .tc-page * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Body replacement */
+        .tc-page {
+            background-color: #f2f2f2;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Container */
+        .tc-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Main Heading */
+        .tc-h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Section Headings */
+        .tc-h2 {
+            font-size: 18px;
+            color: #00a651;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        /* Paragraph */
+        .tc-p {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        /* Small text */
+        .tc-small-text {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        /* Lists */
+        .tc-ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .tc-li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        /* Links */
+        .tc-a {
+            color: #00a651;
+            text-decoration: none;
+        }
+
+        .tc-a:hover {
+            text-decoration: underline;
+        }
+
+        /* Divider */
+        .tc-section-divider {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body class="tc-page"> -->
+{% extends "layout.html" %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/terms.css') }}">
+{% endblock %}
+{% block body %}
+    <div class="tc-container">
+
+        <h1 class="tc-h1">Terms & Conditions</h1>
+        <p class="tc-small-text">Last updated: April 25, 2026</p>
+
+        <p class="tc-p">HimRooms ("us", "we", or "our") operates the website (the "Service").</p>
+
+        <p class="tc-p">This page informs you of our policies regarding the collection, use, and disclosure of Personal
+            Information when you use our Service to find rooms, flatmates, PGs, or generate rental agreements in Himachal Pradesh.</p>
+
+        <p class="tc-p">We use your Personal Information for providing and improving the Service. By using the Service,
+            you agree to the collection and use of information in accordance with this policy.</p>
+
+        <h2 class="tc-h2">Information Collection And Use</h2>
+        <p class="tc-p">While using our Service, we may ask you to provide us with certain personally identifiable
+            information that can be used to contact or identify you. This includes, but is not limited to, your name, email address, phone number, and location preferences.</p>
+
+        <h2 class="tc-h2">Tenant Verification Data</h2>
+        <p class="tc-p">For users utilizing our Tenant Verification services, we securely collect government-issued documents (such as Aadhaar cards). This data is strictly used for background verification purposes to ensure the safety of our community. HimRooms acts solely as a facilitator in this process and relies on third-party authorities for validation.</p>
+
+        <h2 class="tc-h2">User Postings & Communication</h2>
+        <p class="tc-p">Our Services provide you with an opportunity to post requirements (e.g., looking for a flatmate) and exchange messages with other users. HimRooms does not guarantee the accuracy, integrity, or quality of User Postings. Under no circumstances shall HimRooms be liable for any errors or omissions in any User Postings, or any loss or damage incurred as a result of relying on them.</p>
+
+        <h2 class="tc-h2">Rental Agreement Generator</h2>
+        <p class="tc-p">The automated rental agreements and rent receipts generated through HimRooms are provided solely as general templates for your convenience. HimRooms does not provide legal advice and does not take any responsibility for any legal disputes, loss, or damage arising from the use of these templates. Users are responsible for getting their agreements notarized independently if required by law.</p>
+
+        <h2 class="tc-h2">Premium Properties & Partner Services</h2>
+        <ul class="tc-ul">
+            <li class="tc-li">When booking a visit for a Premium Property, HimRooms securely shares your contact details with the verified property owner/partner.</li>
+            <li class="tc-li">Customers must independently verify the property conditions, rates, and service quality directly with the property owner before making any financial commitments.</li>
+            <li class="tc-li">HimRooms shall not be held responsible for any financial transactions, disputes, or liabilities arising directly between tenants and property owners.</li>
+        </ul>
+
+        <h2 class="tc-h2">The Rights of Users</h2>
+        <p class="tc-p">Users have the right, at any time, to know whether their Personal Data has been stored and can
+            request to view, update, or delete their account and associated data by contacting our support team.</p>
+
+        <h2 class="tc-h2">Security</h2>
+        <p class="tc-p">The security of your Personal Information is important to us. We utilize secure OTP-based logins and database protections, but remember that no method of transmission over the Internet is 100% secure. We strive to use commercially acceptable means to protect your Personal Information but cannot guarantee its absolute security.</p>
+
+        <h2 class="tc-h2">Changes To These Terms</h2>
+        <p class="tc-p">We may update our Terms & Conditions and Privacy Policy from time to time. We will notify you of any changes by posting the new terms on this page. Changes are effective immediately when they are posted.</p>
+
+    </div>
+
+{% endblock %}
+
+<!-- </body>
+
+</html> -->

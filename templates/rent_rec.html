@@ -1,0 +1,286 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/rent_rec.css') }}">
+<style>
+    /* Styling specifically for the generated receipt */
+    .receipt-card {
+        background: white;
+        width: 100%;
+        max-width: 800px;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-top: 8px solid #20a25c;
+        margin: 0 auto;
+    }
+
+    .receipt-header {
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 2px solid #f3f4f6;
+        padding-bottom: 20px;
+    }
+
+    .receipt-brand {
+        font-size: 36px;
+        font-weight: 600;
+        color: #20a25c;
+        margin-bottom: 5px;
+    }
+
+    .receipt-sub {
+        font-size: 18px;
+        color: #666;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .receipt-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .data-group {
+        margin-bottom: 15px;
+    }
+
+    .data-label {
+        font-size: 12px;
+        color: #777;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    .data-value {
+        font-size: 16px;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .total-box {
+        background: #f9fafb;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        margin-bottom: 40px;
+        border: 1px dashed #d1d5db;
+    }
+
+    .total-amount {
+        font-size: 28px;
+        font-weight: 600;
+        color: #1f2937;
+        margin-top: 10px;
+    }
+
+    .footer-sigs {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+
+    .signature-line {
+        width: 200px;
+        border-top: 1px solid #333;
+        text-align: center;
+        padding-top: 10px;
+        color: #555;
+        font-size: 14px;
+    }
+
+    /* Buttons */
+    .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 40px;
+    }
+
+    .print-btn {
+        padding: 12px 30px;
+        background: #20a25c;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .back-btn {
+        padding: 12px 30px;
+        background: #6b7280;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    /* Hides the buttons and the website nav bar when printing! */
+    @media print {
+
+        .action-buttons,
+        header,
+        footer,
+        nav {
+            display: none !important;
+        }
+
+        body,
+        .rr-page {
+            background: white;
+            padding: 0;
+            margin: 0;
+        }
+
+        .receipt-card {
+            box-shadow: none;
+            border: none;
+            padding: 0;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="rr-page">
+
+    {% if receipt_data %}
+    <div class="receipt-card">
+        <div class="receipt-header">
+            <div class="receipt-brand">HimRooms</div>
+            <div class="receipt-sub">Rent Receipt</div>
+        </div>
+
+        <div class="receipt-grid">
+            <div>
+                <div class="data-group">
+                    <div class="data-label">Tenant Name</div>
+                    <div class="data-value">{{ receipt_data.tenantName }}</div>
+                </div>
+                <div class="data-group">
+                    <div class="data-label">Tenant Mobile</div>
+                    <div class="data-value">{{ receipt_data.tenantMobile }}</div>
+                </div>
+                <div class="data-group">
+                    <div class="data-label">Tenant Email</div>
+                    <div class="data-value">{{ receipt_data.tenantEmail }}</div>
+                </div>
+                <div class="data-group">
+                    <div class="data-label">Duration</div>
+                    <div class="data-value">{{ receipt_data.months }} Month(s)</div>
+                </div>
+                <div class="data-group">
+                    <div class="data-label">Start Date</div>
+                    <div class="data-value">{{ receipt_data.startDate }}</div>
+                </div>
+            </div>
+            <div>
+                <div class="data-group">
+                    <div class="data-label">Landlord Name</div>
+                    <div class="data-value">{{ receipt_data.landlordName }}</div>
+                </div>
+                <div class="data-group">
+                    <div class="data-label">Landlord PAN</div>
+                    <div class="data-value">{{ receipt_data.landlordPan }}</div>
+                </div>
+                <div class="data-group">
+                    <div class="data-label">Property Address</div>
+                    <div class="data-value">{{ receipt_data.propAddress }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="total-box">
+            <div class="data-label" style="font-size: 16px;">Total Rent Paid</div>
+            <div class="total-amount">₹{{ receipt_data.totalRent }}</div>
+            <div style="font-size: 13px; color: #666; margin-top: 5px;">(₹{{ receipt_data.rentAmount }} × {{
+                receipt_data.months }} months)</div>
+        </div>
+
+        <div class="footer-sigs">
+            <div class="signature-line">Tenant Signature</div>
+            <div class="signature-line">Landlord Signature</div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="print-btn" onclick="window.print()">🖨️ Print Receipt</button>
+            <a href="{{ url_for('rent_rec') }}" class="back-btn">Create Another</a>
+        </div>
+    </div>
+
+
+    {% else %}
+    <div class="rr-container">
+        <h2 class="rr-title">Generate Free Rent Receipts</h2>
+
+        {% if error %}
+        <div
+            style="color: red; text-align: center; margin-bottom: 20px; padding: 10px; border: 1px solid red; border-radius: 5px; background-color: #ffe6e6;">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <form method="POST" action="{{ url_for('rent_rec') }}">
+            <div class="rr-form-grid">
+                <div class="rr-input-group">
+                    <label>Monthly Rent Amount</label>
+                    <input type="number" name="rentAmount" required min="1">
+                </div>
+
+                <div class="rr-input-group">
+                    <label>Property Address</label>
+                    <input type="text" name="propAddress" required>
+                </div>
+
+                <div class="rr-input-group">
+                    <label>Landlord Name</label>
+                    <input type="text" name="landlordName" required>
+                </div>
+
+                <div class="rr-input-group">
+                    <label>Landlord PAN (optional)</label>
+                    <input type="text" name="landlordPan">
+                </div>
+
+                <div class="rr-input-group">
+                    <label>Receipt Start Date</label>
+                    <input type="date" name="startDate" required>
+                </div>
+
+                <div class="rr-input-group">
+                    <label>No. of months</label>
+                    <input type="number" name="months" required min="1">
+                </div>
+
+                <div class="rr-input-group">
+                    <label>Tenant Name</label>
+                    <input type="text" name="tenantName" required>
+                </div>
+
+                <div class="rr-input-group">
+                    <label>Tenant Mobile</label>
+                    <input type="text" name="tenantMobile" required pattern="^[6-9]\d{9}$"
+                        title="Must be a 10-digit number starting with 6, 7, 8, or 9">
+                </div>
+
+                <div class="rr-input-group">
+                    <label>Email</label>
+                    <input type="email" name="tenantEmail" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+                    <span class="rr-note">You will receive rent receipt copy on this email address.</span>
+                </div>
+            </div>
+
+            <div class="rr-button-area">
+                <button class="rr-button" type="submit">Generate</button>
+            </div>
+        </form>
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,184 @@
+/* Background wrapper */
+.agreement-wrapper {
+    background-color: #f4f6f8;
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+/* The physical "Paper" document */
+.agreement-document {
+    max-width: 850px;
+    margin: 0 auto;
+    background: white;
+    padding: 70px 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-top: 10px solid #2c3e50; /* Gives a professional folder-like top edge */
+    border-radius: 4px;
+    color: #333;
+    line-height: 1.8;
+    font-family: 'Times New Roman', Times, serif; /* Standard legal document font */
+}
+
+/* Typography */
+.agreement-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.agreement-intro {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.agreement-section-title {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.agreement-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.agreement-text strong {
+    color: #000;
+}
+
+/* Signatures */
+.agreement-signatures {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.signature-block {
+    text-align: center;
+    width: 250px;
+}
+
+.signature-line {
+    border-bottom: 1px solid #111;
+    margin-bottom: 15px;
+    height: 50px; /* Space for them to physically sign after printing */
+}
+
+.signature-label {
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Print Button Styles */
+.agreement-actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.print-btn {
+    background-color: #1fa463;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: background 0.3s;
+    box-shadow: 0 4px 15px rgba(31, 164, 99, 0.3);
+}
+
+.print-btn:hover {
+    background-color: #178a52;
+}
+
+/* MAGIC: This tells the browser exactly how to format the document for the printer */
+@media print {
+    /* 1. Hide default browser headers/footers (Date, URL, etc.) */
+    @page {
+        margin: 0; 
+        size: A4;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+    }
+
+    /* 2. Hide everything on the website (navbar, footer, etc.) */
+    body * {
+        visibility: hidden; 
+    }
+    
+    /* 3. ONLY show the document text */
+    .agreement-document, .agreement-document * {
+        visibility: visible; 
+    }
+    
+    .agreement-document {
+        position: absolute;
+        left: 0;
+        top: 0;
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        /* Create physical page margins since we set @page margin to 0 */
+        padding: 20mm 20mm; 
+        box-sizing: border-box;
+        
+        /* 4. SHRINK SPACING TO FIT ON ONE PAGE */
+        line-height: 1.4; 
+    }
+
+    .agreement-wrapper {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    /* Compress margins and fonts for A4 paper */
+    .agreement-title {
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+
+    .agreement-intro {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .agreement-section-title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        padding-bottom: 4px;
+    }
+
+    .agreement-text {
+        margin-bottom: 8px;
+        font-size: 14px; 
+    }
+
+    .agreement-signatures {
+        margin-top: 40px; /* Shrunk from 80px to pull it up to Page 1 */
+    }
+    
+    .signature-line {
+        margin-bottom: 5px;
+        height: 35px; /* Shrunk signature space slightly */
+    }
+}

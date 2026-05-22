@@ -1,0 +1,215 @@
+.c4-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fb;
+    min-height: 100vh;
+    padding: 40px 20px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+.c4-header {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.c4-header h1 {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #445164;
+}
+
+.c4-underline {
+    width: 130px;
+    height: 2px;
+    background-color: #445164;
+    margin: 0 auto;
+}
+
+/* Layout */
+.c4-container {
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Steps */
+.c4-steps {
+    width: 250px;
+}
+
+.c4-step {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.c4-step a {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.c4-step a:hover {
+    color: #2c3e50;
+}
+
+.c4-active-text {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.c4-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #adb5bd;
+    margin-right: 12px;
+}
+
+.c4-active {
+    background: #2c3e50;
+}
+
+/* Form Card */
+.c4-card {
+    background: white;
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 80px;
+    flex-grow: 1;
+}
+
+.c4-card h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.c4-description {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+/* Grid */
+.c4-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.c4-grid-header {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+/* Inputs */
+.c4-grid input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: #1e293b;
+}
+
+.c4-grid input::placeholder {
+    color: #cbd5e1;
+}
+
+.c4-grid input:focus {
+    outline: none;
+    border-color: #1db473;
+}
+
+/* Action Links */
+.c4-actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.c4-action-link {
+    display: inline-block;
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.c4-action-link:hover {
+    text-decoration: underline;
+}
+
+#c4-remove-link {
+    display: none;
+}
+
+/* Button */
+.c4-footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.c4-btn {
+    background-color: #1db473;
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.c4-btn:hover {
+    background-color: #169b62;
+}
+
+/* FIX: CSS for a completed step checkmark */
+.completed-circle {
+    background: #1fa463 !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+}
+
+.completed-circle::after {
+    content: '✓';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .c4-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .c4-steps {
+        width: auto;
+    }
+
+    .c4-card {
+        width: 90%;
+    }
+}

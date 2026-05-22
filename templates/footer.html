@@ -1,0 +1,56 @@
+<footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-col brand">
+                <div class="logo">Him<span>Rooms</span><sup>®</sup></div>
+                <p>Barol , Near Satyam Mega Mart, Dharamshala (Kangra, Himachal Pradesh) </p>
+                <p>dadwalpreeti31@gmail.com</p>
+                <a href="{{ url_for('contact', source='footer') }}" class="contact-view-btn">Contact</a>
+                <div class="socials">
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="{{url_for('company')}}">Company</a></li>
+                    <li><a href="{{url_for('terms')}}">Terms & Conditions</a></li>
+                    <li><a href="{{url_for('privacy')}}">Privacy Policy</a></li>
+                    <li><a href="{{url_for('refund')}}">Refund & Cancellation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Flatmates</h4>
+                <ul>
+                    <li><a href="{{ url_for('city_listings', city_slug='shimla') }}">Flatemates in Shimla</a></li>
+                    <li><a href="{{ url_for('city_listings', city_slug='dharamshala') }}">Flatemates in Dharamshala</a></li>
+                    <li><a href="{{ url_for('city_listings', city_slug='manali') }}">Flatemates in Manali</a></li>
+                    <li><a href="{{ url_for('city_listings', city_slug='solan') }}">Flatemates in Solan</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>PGs</h4>
+                <ul>
+                    <li><a href="{{ url_for('city_category_listings', city_slug='shimla', category='pg') }}">PGs in Shimla</a></li>
+                    <li><a href="{{ url_for('city_category_listings', city_slug='dharamshala', category='pg') }}">PGs in Dharamshala</a></li>
+                    <li><a href="{{ url_for('city_category_listings', city_slug='manali', category='pg') }}">PGs in Manali</a></li>
+                    <li><a href="{{ url_for('city_category_listings', city_slug='solan', category='pg') }}">PGs in Solan</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="{{url_for('create')}}">Rental Agreement</a></li>
+                    <li><a href="{{url_for('reqver')}}">Tenant Verification</a></li>
+                    <li><a href="{{url_for('rent_rec')}}">Rent Receipt</a></li>
+                    <li><a href="{{url_for('manage_flat')}}">Manage Your Flat</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Product of <strong>MCA Student Project</strong></p>
+            <p>© 2026 HimRooms.in All Rights Reserved</p>
+        </div>
+    </footer>

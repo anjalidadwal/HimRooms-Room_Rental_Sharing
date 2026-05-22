@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/premium.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="pm-page">
+  <div class="pm-container pm-detail-wrap">
+    <a href="{{ url_for('premium', city=property.city_slug) }}" class="pm-back-link">← Back to Premium Properties</a>
+
+    <div class="pm-detail-grid">
+      <div class="pm-detail-main">
+        <div class="pm-detail-gallery-shell">
+          <button class="pm-gallery-nav prev" type="button" onclick="changePremiumSlide(-1)">&#10094;</button>
+          <img id="premiumMainImage" src="{{ property.image }}" alt="{{ property.title }}" class="pm-detail-cover">
+          <button class="pm-gallery-nav next" type="button" onclick="changePremiumSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="pm-detail-thumbs" id="premiumThumbs">
+          {% for image in gallery_images %}
+          <button type="button" class="pm-thumb {% if loop.first %}active{% endif %}" onclick="selectPremiumSlide({{ loop.index0 }})">
+            <img src="{{ image.url }}" alt="{{ image.label or property.title }}">
+            <span>{{ image.label or 'View' }}</span>
+          </button>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="pm-detail-card">
+        {% if property.badge %}
+        <div class="pm-badge">{{ property.badge }}</div>
+        {% endif %}
+        <h1 class="pm-detail-title">{{ property.title }}</h1>
+        <div class="pm-location">{{ property.location }}</div>
+        <div class="pm-detail-price">₹{{ property.price }} <span>/ month</span></div>
+
+        <div class="pm-banner" style="margin-top: 20px; width: auto;">
+          Premium partner property with verified listing support.
+        </div>
+
+        <a href="{{ url_for('premium4', property_id=property.premium_id) }}" class="pm-btn pm-detail-btn">Book Visit</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let premiumImageIndex = 0;
+  const premiumImages = {{ (gallery_images or [{'url': property.image, 'label': 'View'}]) | tojson }};
+
+  function updatePremiumMainImage() {
+    const mainImage = document.getElementById('premiumMainImage');
+    if (!mainImage || !premiumImages.length) {
+      return;
+    }
+
+    const current = premiumImages[premiumImageIndex] || {};
+    mainImage.src = current.url || '{{ property.image }}';
+    mainImage.alt = current.label || '{{ property.title }}';
+    updatePremiumThumbHighlight();
+  }
+
+  function changePremiumSlide(direction) {
+    if (!premiumImages.length) {
+      return;
+    }
+
+    premiumImageIndex += direction;
+    if (premiumImageIndex >= premiumImages.length) {
+      premiumImageIndex = 0;
+    } else if (premiumImageIndex < 0) {
+      premiumImageIndex = premiumImages.length - 1;
+    }
+
+    updatePremiumMainImage();
+  }
+
+  function selectPremiumSlide(index) {
+    if (!premiumImages.length) {
+      return;
+    }
+
+    premiumImageIndex = index;
+    updatePremiumMainImage();
+  }
+
+  function updatePremiumThumbHighlight() {
+    const thumbs = document.querySelectorAll('#premiumThumbs .pm-thumb');
+    thumbs.forEach((thumb, idx) => {
+      thumb.classList.toggle('active', idx === premiumImageIndex);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    updatePremiumMainImage();
+  });
+</script>
+{% endblock %}

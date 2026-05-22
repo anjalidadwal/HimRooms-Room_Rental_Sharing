@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interest Form</title>
+
+    <style>
+        /* Container */
+        .fm-modal-wrapper {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Form Box */
+        .fm-modal-box {
+            width: 600px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 6px;
+            position: relative;
+        }
+
+        /* Close button */
+        .fm-close-btn {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            font-size: 22px;
+            cursor: pointer;
+            color: #888;
+        }
+
+        /* Heading */
+        .fm-form-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        /* Grid layout */
+        .fm-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Form group */
+        .fm-input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Labels */
+        .fm-input-label {
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: #555;
+        }
+
+        /* Inputs */
+        .fm-input-field {
+            height: 38px;
+            border: none;
+            border-radius: 6px;
+            background: #f0f0f0;
+            padding: 8px 10px;
+            outline: none;
+        }
+
+        /* Terms row */
+        .fm-terms-row {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .fm-terms-row a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        /* Button container */
+        .fm-btn-wrapper {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        /* Submit Button */
+        .fm-submit-btn {
+            background: #8ed1b2;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .fm-submit-btn:hover {
+            background: #7cc4a3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="fm-modal-wrapper">
+
+        <div class="fm-modal-box">
+
+            <a href="{{ url_for('manage_flat') }}" class="fm-close-btn">&times;</a>
+
+            <h2 class="fm-form-title">Enter your details</h2>
+
+            <form>
+
+                <div class="fm-form-grid">
+
+                    <div class="fm-input-group">
+                        <label class="fm-input-label">Your Name</label>
+                        <input type="text" class="fm-input-field">
+                    </div>
+
+                    <div class="fm-input-group">
+                        <label class="fm-input-label">Mobile</label>
+                        <input type="text" class="fm-input-field">
+                    </div>
+
+                    <div class="fm-input-group">
+                        <label class="fm-input-label">Email</label>
+                        <input type="email" class="fm-input-field">
+                    </div>
+
+                    <div class="fm-input-group">
+                        <label class="fm-input-label">City</label>
+                        <input type="text" class="fm-input-field">
+                    </div>
+
+                </div>
+
+                <div class="fm-terms-row">
+                    <input type="checkbox" checked>
+                    I accept <a href="#">FlatMate's terms & conditions</a>
+                </div>
+
+                <div class="fm-btn-wrapper">
+                    <button class="fm-submit-btn">Submit Interest</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

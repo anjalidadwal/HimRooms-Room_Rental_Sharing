@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Verify OTP - HimRooms</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .verify-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 5px;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            border-color: #00b87c;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            background: #1a202c;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2d3748;
+        }
+
+        .error {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="verify-card">
+        <h2>Enter Verification Code</h2>
+        <p style="color: #666; font-size: 14px;">We sent a 6-digit code to your email.</p>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        {% if info %}
+        <div style="background-color: #ecfeff; color: #0e7490; padding: 10px; border-radius: 6px; margin-bottom: 15px; font-size: 14px;">
+            {{ info }}
+        </div>
+        {% endif %}
+
+        {% if debug_otp %}
+        <div style="background-color: #fff7ed; color: #9a3412; padding: 10px; border-radius: 6px; margin-bottom: 15px; font-size: 14px; border: 1px solid #fed7aa;">
+            Debug OTP (local only): <strong>{{ debug_otp }}</strong>
+        </div>
+        {% endif %}
+
+        <form method="POST" action="{{ url_for('verify_otp') }}">
+            <input type="text" name="otp" placeholder="000000" maxlength="6" required>
+            <button type="submit">Verify & Login</button>
+        </form>
+    </div>
+</body>
+
+</html>
