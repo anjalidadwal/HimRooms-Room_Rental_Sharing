@@ -58,6 +58,7 @@ Shimla, Dharamshala, Manali, Kangra, Palampur, Chamba, Bilaspur, Sundernagar, Nu
    - Gmail credentials (for email notifications)
    - Flask secret key
    - Database URI (if using a different database)
+   - `DATABASE_URL` is also supported for cloud providers and Vercel deployments
 
 5. **Run the application**
    ```bash

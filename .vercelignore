@@ -1,0 +1,6 @@
+*.db
+*.sqlite
+.env
+users.json
+static/uploads/
+__pycache__/

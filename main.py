@@ -10,6 +10,7 @@ import re
 import secrets
 import math
 import datetime
+import tempfile
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -28,16 +29,26 @@ app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS', 'False').lower() == 'true
 app.config['MAIL_USE_SSL'] = os.getenv('MAIL_USE_SSL', 'True').lower() == 'true'
 app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME', '')
 app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD', '')
-app.config['MAIL_DEFAULT_SENDER'] = app.config['MAIL_USERNAME']
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER', app.config['MAIL_USERNAME'])
 
 mail = Mail(app)
 
 # --- DATABASE CONFIGURATION ---
-# This tells Flask to create a file named 'himrooms.db' in your project folder
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI', 'sqlite:///himrooms.db')
+# Use a managed database URI when deployed on Vercel.
+# For local development this falls back to SQLite.
+is_vercel = os.getenv('VERCEL', '0') == '1'
+app.config['SQLALCHEMY_DATABASE_URI'] = (
+    os.getenv('SQLALCHEMY_DATABASE_URI')
+    or os.getenv('DATABASE_URL')
+    or ('sqlite:////tmp/himrooms.db' if is_vercel else 'sqlite:///himrooms.db')
+)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = os.getenv('SQLALCHEMY_TRACK_MODIFICATIONS', 'False').lower() == 'true'
 
-UPLOAD_FOLDER = os.path.join('static', 'uploads')
+# Use ephemeral temp storage for uploads on Vercel.
+UPLOAD_FOLDER = os.getenv(
+    'UPLOAD_FOLDER',
+    os.path.join(tempfile.gettempdir(), 'flatmate_uploads') if is_vercel else os.path.join('static', 'uploads')
+)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Ensure the upload folder exists
@@ -71,6 +82,24 @@ class RentAgreement(db.Model):
     validity = db.Column(db.Integer)
     start_date = db.Column(db.String(20))
     created_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(100), unique=True, nullable=False, index=True)
+    name = db.Column(db.String(100), nullable=False)
+    mobile = db.Column(db.String(15), nullable=False)
+    city = db.Column(db.String(50), nullable=False)
+    avatar = db.Column(db.String(255), nullable=False, default='avatarm.jpg')
+    created_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+
+    def to_dict(self):
+        return {
+            'name': self.name,
+            'email': self.email,
+            'mobile': self.mobile,
+            'city': self.city,
+            'avatar': self.avatar,
+        }
 
 # NEW: Model to store all property visit requests
 class VisitRequest(db.Model):
@@ -318,7 +347,31 @@ def filter_properties(properties, city_name, category=None):
 
     return filtered
 
-USERS_FILE = os.path.join(app.root_path, 'users.json')
+def get_user_by_email(email):
+    normalized = normalize_email(email)
+    if not normalized:
+        return None
+    return User.query.filter_by(email=normalized).first()
+
+
+def save_user(user_data):
+    email = normalize_email(user_data.get('email'))
+    if not email:
+        return None
+
+    user = User.query.filter_by(email=email).first()
+    if not user:
+        user = User(email=email)
+
+    user.name = user_data.get('name') or user.name
+    user.mobile = user_data.get('mobile') or user.mobile
+    user.city = user_data.get('city') or user.city
+    user.avatar = user_data.get('avatar') or getattr(user, 'avatar', 'avatarm.jpg')
+
+    db.session.add(user)
+    db.session.commit()
+    return user
+
 
 def load_premium_data():
     file_path = os.path.join(app.root_path, 'premium_data.json')
@@ -389,38 +442,9 @@ def get_premium_property_by_id(properties, property_id):
             return prop
     return None
 
-def load_users():
-    if not os.path.exists(USERS_FILE):
-        return {}
-    with open(USERS_FILE, 'r', encoding='utf-8') as file:
-        return json.load(file)
-
-def save_user(user_key, user_data):
-    users = load_users()
-    users[user_key] = user_data
-    with open(USERS_FILE, 'w', encoding='utf-8') as file:
-        json.dump(users, file, indent=4)
-
 
 def normalize_email(email):
     return (email or '').strip().lower()
-
-
-def get_user_by_email(users, email):
-    normalized = normalize_email(email)
-
-    if normalized in users:
-        return normalized, users[normalized]
-
-    # Backward compatibility for older structures where user key was not email.
-    for user_key, user_data in users.items():
-        if not isinstance(user_data, dict):
-            continue
-        user_data_email = normalize_email(user_data.get('email'))
-        if user_data_email and user_data_email == normalized:
-            return user_key, user_data
-
-    return None, None
 
 
 def send_login_otp_email(recipient_email, otp_code):
@@ -457,9 +481,7 @@ def login():
     if request.method == 'POST':
         user_email = normalize_email(request.form.get('email'))
         prefill_email = user_email
-        users = load_users()
-
-        user_key, saved_user = get_user_by_email(users, user_email)
+        saved_user = get_user_by_email(user_email)
 
         # Check if the EMAIL exists in our records
         if saved_user:
@@ -467,7 +489,7 @@ def login():
             otp = str(random.randint(100000, 999999))
             session['otp'] = otp
             session['temp_email'] = user_email
-            session['temp_user_key'] = user_key
+            session['temp_user_key'] = saved_user.email
             
             # Send the Email
             try:
@@ -502,18 +524,16 @@ def verify_otp():
         
         if user_entered_otp == session.get('otp'):
             # Correct OTP! Log them in.
-            users = load_users()
-
-            saved_user = users.get(temp_user_key)
+            saved_user = get_user_by_email(temp_email)
             if not saved_user:
                 return redirect(url_for('login', info='User not found. Please login again.'))
             
             session['logged_in'] = True
-            session['user_name'] = saved_user['name']
+            session['user_name'] = saved_user.name
             session['user_email'] = temp_email
-            session['user_mobile'] = saved_user.get('mobile', '')
-            session['user_city'] = saved_user['city']
-            session['user_avatar'] = saved_user['avatar']
+            session['user_mobile'] = saved_user.mobile
+            session['user_city'] = saved_user.city
+            session['user_avatar'] = saved_user.avatar
             
             # Clear security variables
             session.pop('otp', None)
@@ -555,9 +575,8 @@ def register():
             error_message = "Invalid mobile number. Must be 10 digits starting with 6, 7, 8, or 9."
             return render_template('register.html', error=error_message)
 
-        users = load_users()
-        existing_key, _ = get_user_by_email(users, email)
-        if existing_key:
+        existing_user = get_user_by_email(email)
+        if existing_user:
             error_message = "Email is already registered. Please login instead."
             return render_template('register.html', error=error_message)
         
@@ -572,7 +591,7 @@ def register():
         }
         
         # Save user by normalized email so login lookup remains consistent.
-        save_user(email, user_data)
+        save_user(user_data)
 
         return redirect(url_for('login', info='Registration successful. Please login with OTP.', email=email))
 
